@@ -21,7 +21,12 @@ export default async function AdminDashboardPage() {
 
   return (
     <div>
-      <h1 className="text-xl md:text-2xl font-bold text-foreground mb-6 md:mb-8">대시보드</h1>
+      <div className="mb-6 md:mb-8">
+        <h1 className="text-xl md:text-2xl font-bold text-foreground">대시보드</h1>
+        <p className="mt-1 text-sm text-muted-foreground">
+          전체 현황을 한눈에 확인하세요
+        </p>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {stats.map(({ label, count, href, icon: Icon }) => (
           <Card

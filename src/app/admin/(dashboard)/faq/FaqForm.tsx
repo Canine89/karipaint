@@ -38,6 +38,7 @@ export function FaqForm({ faq }: FaqFormProps) {
       className="space-y-8 max-w-2xl"
     >
       <section className="space-y-5">
+        <h2 className="text-sm font-semibold text-muted-foreground">FAQ 내용</h2>
         <div>
           <Label htmlFor="question">질문</Label>
           <Input

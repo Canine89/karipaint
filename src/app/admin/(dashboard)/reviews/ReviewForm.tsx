@@ -38,6 +38,7 @@ export function ReviewForm({ review }: ReviewFormProps) {
       className="space-y-8 max-w-2xl"
     >
       <section className="space-y-5">
+        <h2 className="text-sm font-semibold text-muted-foreground">후기 정보</h2>
         <div>
           <Label>후기 내용</Label>
           <AiDraftSection

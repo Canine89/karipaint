@@ -1,9 +1,10 @@
 import { PortfolioForm } from "../PortfolioForm";
+import { FormPageHeader } from "../../FormPageHeader";
 
 export default function NewPortfolioPage() {
   return (
     <div>
-      <h1 className="text-xl md:text-2xl font-bold text-foreground mb-6 md:mb-8">포트폴리오 등록</h1>
+      <FormPageHeader title="포트폴리오 등록" backHref="/admin/portfolio" />
       <PortfolioForm />
     </div>
   );
