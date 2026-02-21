@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Loader2 } from "lucide-react";
 import { AiDraftSection } from "@/components/admin/AiDraftSection";
 import type { Review } from "@/lib/domain/types";
 import { createReview, updateReview } from "../../actions";
@@ -17,22 +18,28 @@ export function ReviewForm({ review }: ReviewFormProps) {
   const router = useRouter();
   const isEdit = !!review;
   const [quote, setQuote] = useState(review?.quote ?? "");
+  const [submitting, setSubmitting] = useState(false);
 
   return (
     <form
       action={async (formData: FormData) => {
-        const data = {
-          quote: formData.get("quote") as string,
-          author: formData.get("author") as string,
-          spaceType: formData.get("spaceType") as string,
-          order: Number(formData.get("order")),
-        };
-        if (isEdit) {
-          await updateReview(review.id, data);
+        if (submitting) return;
+        setSubmitting(true);
+        try {
+          const data = {
+            quote: formData.get("quote") as string,
+            author: formData.get("author") as string,
+            spaceType: formData.get("spaceType") as string,
+            order: Number(formData.get("order")),
+          };
+          if (isEdit) {
+            await updateReview(review.id, data);
+          } else {
+            await createReview(data);
+          }
           router.push("/admin/reviews");
-        } else {
-          await createReview(data);
-          router.push("/admin/reviews");
+        } catch {
+          setSubmitting(false);
         }
       }}
       className="space-y-8 max-w-2xl"
@@ -90,14 +97,18 @@ export function ReviewForm({ review }: ReviewFormProps) {
         </div>
       </section>
       <div className="flex flex-col-reverse sm:flex-row gap-3 pt-6 border-t">
-        <Button type="submit" className="h-11">
-          {isEdit ? "수정" : "등록"}
+        <Button type="submit" className="h-11" disabled={submitting}>
+          {submitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {submitting
+            ? isEdit ? "수정 중..." : "등록 중..."
+            : isEdit ? "수정" : "등록"}
         </Button>
         <Button
           type="button"
           variant="outline"
           onClick={() => router.back()}
           className="h-11"
+          disabled={submitting}
         >
           취소
         </Button>
