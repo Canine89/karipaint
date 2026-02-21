@@ -76,7 +76,7 @@ export async function POST(request: NextRequest) {
             fit: "inside",
           })
           .webp({ quality: WEBP_QUALITY });
-        buffer = await pipeline.toBuffer();
+        buffer = Buffer.from(await pipeline.toBuffer());
         contentType = "image/webp";
         ext = "webp";
       } catch {
