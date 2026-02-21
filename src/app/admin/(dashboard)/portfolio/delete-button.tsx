@@ -17,7 +17,7 @@ export function DeletePortfolioButton({ id }: { id: string }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="ghost" size="icon" className="text-destructive hover:text-destructive">
+        <Button variant="ghost" size="icon" className="h-10 w-10 shrink-0 text-destructive hover:text-destructive">
           <Trash2 className="h-4 w-4" />
           <span className="sr-only">삭제</span>
         </Button>

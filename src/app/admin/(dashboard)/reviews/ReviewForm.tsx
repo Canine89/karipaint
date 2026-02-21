@@ -82,9 +82,9 @@ export function ReviewForm({ review }: ReviewFormProps) {
           className="mt-1"
         />
       </div>
-      <div className="flex gap-2">
-        <Button type="submit">{isEdit ? "수정" : "등록"}</Button>
-        <Button type="button" variant="outline" onClick={() => router.back()}>
+      <div className="flex flex-col-reverse sm:flex-row gap-2 pt-2">
+        <Button type="submit" className="min-h-11">{isEdit ? "수정" : "등록"}</Button>
+        <Button type="button" variant="outline" onClick={() => router.back()} className="min-h-11">
           취소
         </Button>
       </div>

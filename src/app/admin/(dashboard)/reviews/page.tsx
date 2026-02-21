@@ -9,6 +9,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Card, CardContent } from "@/components/ui/card";
 import { Plus, Pencil } from "lucide-react";
 import { DeleteReviewButton } from "./delete-button";
 
@@ -17,16 +18,51 @@ export default async function AdminReviewsPage() {
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-8">
-        <h1 className="text-2xl font-bold text-foreground">고객 후기</h1>
-        <Button asChild>
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-6 md:mb-8">
+        <h1 className="text-xl md:text-2xl font-bold text-foreground">고객 후기</h1>
+        <Button asChild className="w-full sm:w-auto shrink-0">
           <Link href="/admin/reviews/new">
             <Plus className="mr-2 h-4 w-4" />
             추가
           </Link>
         </Button>
       </div>
-      <div className="rounded-md border">
+
+      {/* 모바일: 카드 뷰 */}
+      <div className="md:hidden space-y-3">
+        {reviews.length === 0 ? (
+          <div className="rounded-lg border border-dashed p-8 text-center text-muted-foreground text-sm">
+            등록된 후기가 없습니다.
+          </div>
+        ) : (
+          reviews.map((item) => (
+            <Card key={item.id}>
+              <CardContent className="p-4">
+                <p className="text-foreground line-clamp-2">&ldquo;{item.quote}&rdquo;</p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  — {item.author}
+                  {item.spaceType && ` · ${item.spaceType}`}
+                </p>
+                <div className="flex items-center justify-between gap-2 mt-3">
+                  <span className="text-xs text-muted-foreground">순서: {item.order}</span>
+                  <div className="flex gap-2">
+                    <Button asChild variant="outline" size="sm">
+                      <Link href={`/admin/reviews/${item.id}`}>
+                        <Pencil className="mr-1.5 h-3.5 w-3.5" />
+                        수정
+                      </Link>
+                    </Button>
+                    <DeleteReviewButton id={item.id} />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))
+        )}
+      </div>
+
+      {/* 데스크톱: 테이블 */}
+      <div className="hidden md:block rounded-md border overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow>

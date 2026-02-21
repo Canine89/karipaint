@@ -9,6 +9,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Card, CardContent } from "@/components/ui/card";
 import { Plus, Pencil, Trash2 } from "lucide-react";
 import { DeletePortfolioButton } from "./delete-button";
 
@@ -17,16 +18,47 @@ export default async function AdminPortfolioPage() {
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-8">
-        <h1 className="text-2xl font-bold text-foreground">포트폴리오</h1>
-        <Button asChild>
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-6 md:mb-8">
+        <h1 className="text-xl md:text-2xl font-bold text-foreground">포트폴리오</h1>
+        <Button asChild className="w-full sm:w-auto shrink-0">
           <Link href="/admin/portfolio/new">
             <Plus className="mr-2 h-4 w-4" />
             추가
           </Link>
         </Button>
       </div>
-      <div className="rounded-md border">
+
+      {/* 모바일: 카드 뷰 */}
+      <div className="md:hidden space-y-3">
+        {portfolios.length === 0 ? (
+          <div className="rounded-lg border border-dashed p-8 text-center text-muted-foreground text-sm">
+            등록된 시공 사례가 없습니다.
+          </div>
+        ) : (
+          portfolios.map((item) => (
+            <Card key={item.id}>
+              <CardContent className="p-4">
+                <p className="font-medium text-foreground">{item.title}</p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  {item.category} · {item.region} · {item.duration}
+                </p>
+                <div className="flex gap-2 mt-3">
+                  <Button asChild variant="outline" size="sm" className="flex-1">
+                    <Link href={`/admin/portfolio/${item.id}`}>
+                      <Pencil className="mr-1.5 h-3.5 w-3.5" />
+                      수정
+                    </Link>
+                  </Button>
+                  <DeletePortfolioButton id={item.id} />
+                </div>
+              </CardContent>
+            </Card>
+          ))
+        )}
+      </div>
+
+      {/* 데스크톱: 테이블 */}
+      <div className="hidden md:block rounded-md border overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow>

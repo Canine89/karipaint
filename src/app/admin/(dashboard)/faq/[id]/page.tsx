@@ -16,14 +16,14 @@ export default async function EditFaqPage({ params }: PageProps) {
 
   return (
     <div>
-      <div className="flex items-center gap-4 mb-8">
-        <Button asChild variant="ghost" size="icon">
+      <div className="flex items-center gap-2 md:gap-4 mb-6 md:mb-8">
+        <Button asChild variant="ghost" size="icon" className="h-10 w-10 shrink-0">
           <Link href="/admin/faq">
-            <ArrowLeft className="h-4 w-4" />
+            <ArrowLeft className="h-5 w-5" />
             <span className="sr-only">목록</span>
           </Link>
         </Button>
-        <h1 className="text-2xl font-bold text-foreground">FAQ 수정</h1>
+        <h1 className="text-xl md:text-2xl font-bold text-foreground truncate">FAQ 수정</h1>
       </div>
       <FaqForm faq={faq} />
     </div>

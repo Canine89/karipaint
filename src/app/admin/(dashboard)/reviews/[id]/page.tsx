@@ -16,14 +16,14 @@ export default async function EditReviewPage({ params }: PageProps) {
 
   return (
     <div>
-      <div className="flex items-center gap-4 mb-8">
-        <Button asChild variant="ghost" size="icon">
+      <div className="flex items-center gap-2 md:gap-4 mb-6 md:mb-8">
+        <Button asChild variant="ghost" size="icon" className="h-10 w-10 shrink-0">
           <Link href="/admin/reviews">
-            <ArrowLeft className="h-4 w-4" />
+            <ArrowLeft className="h-5 w-5" />
             <span className="sr-only">목록</span>
           </Link>
         </Button>
-        <h1 className="text-2xl font-bold text-foreground">고객 후기 수정</h1>
+        <h1 className="text-xl md:text-2xl font-bold text-foreground truncate">고객 후기 수정</h1>
       </div>
       <ReviewForm review={review} />
     </div>
