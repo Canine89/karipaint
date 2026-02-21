@@ -31,8 +31,14 @@ export default async function AdminReviewsPage() {
       {/* 모바일: 카드 뷰 */}
       <div className="md:hidden space-y-3">
         {reviews.length === 0 ? (
-          <div className="rounded-lg border border-dashed p-8 text-center text-muted-foreground text-sm">
-            등록된 후기가 없습니다.
+          <div className="rounded-xl border-2 border-dashed border-muted-foreground/20 p-8 md:p-10 text-center">
+            <p className="text-muted-foreground mb-4">등록된 후기가 없습니다.</p>
+            <Button asChild>
+              <Link href="/admin/reviews/new">
+                <Plus className="mr-2 h-4 w-4" />
+                첫 후기 등록하기
+              </Link>
+            </Button>
           </div>
         ) : (
           reviews.map((item) => (
@@ -62,7 +68,7 @@ export default async function AdminReviewsPage() {
       </div>
 
       {/* 데스크톱: 테이블 */}
-      <div className="hidden md:block rounded-md border overflow-x-auto">
+      <div className="hidden md:block rounded-lg border overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow>
@@ -76,13 +82,19 @@ export default async function AdminReviewsPage() {
           <TableBody>
             {reviews.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={5} className="text-center text-muted-foreground py-8">
-                  등록된 후기가 없습니다.
+                <TableCell colSpan={5} className="text-center py-10">
+                  <p className="text-muted-foreground mb-4">등록된 후기가 없습니다.</p>
+                  <Button asChild size="sm">
+                    <Link href="/admin/reviews/new">
+                      <Plus className="mr-2 h-4 w-4" />
+                      첫 후기 등록하기
+                    </Link>
+                  </Button>
                 </TableCell>
               </TableRow>
             ) : (
               reviews.map((item) => (
-                <TableRow key={item.id}>
+                <TableRow key={item.id} className="hover:bg-muted/50 transition-colors">
                   <TableCell className="max-w-[300px] truncate">{item.quote}</TableCell>
                   <TableCell>{item.author}</TableCell>
                   <TableCell>{item.spaceType}</TableCell>

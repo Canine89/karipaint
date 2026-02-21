@@ -35,11 +35,12 @@ export function ReviewForm({ review }: ReviewFormProps) {
           router.push("/admin/reviews");
         }
       }}
-      className="space-y-6 max-w-2xl"
+      className="space-y-8 max-w-2xl"
     >
-      <div>
-        <Label>후기 내용</Label>
-        <AiDraftSection
+      <section className="space-y-5">
+        <div>
+          <Label>후기 내용</Label>
+          <AiDraftSection
           type="review_polish"
           value={quote}
           onChange={setQuote}
@@ -49,40 +50,41 @@ export function ReviewForm({ review }: ReviewFormProps) {
           required
           rows={4}
         />
-      </div>
-      <div>
-        <Label htmlFor="author">작성자</Label>
-        <Input
-          id="author"
-          name="author"
-          defaultValue={review?.author}
-          required
-          className="mt-1"
-          placeholder="예: 강남구 이○○ 고객님"
-        />
-      </div>
-      <div>
-        <Label htmlFor="spaceType">공간 유형</Label>
-        <Input
-          id="spaceType"
-          name="spaceType"
-          defaultValue={review?.spaceType}
-          required
-          className="mt-1"
-          placeholder="예: 거실, 방·거실"
-        />
-      </div>
-      <div>
-        <Label htmlFor="order">정렬 순서</Label>
-        <Input
-          id="order"
-          name="order"
-          type="number"
-          defaultValue={review?.order ?? 0}
-          className="mt-1"
-        />
-      </div>
-      <div className="flex flex-col-reverse sm:flex-row gap-2 pt-2">
+        </div>
+        <div>
+          <Label htmlFor="author">작성자</Label>
+          <Input
+            id="author"
+            name="author"
+            defaultValue={review?.author}
+            required
+            className="mt-2 h-10"
+            placeholder="예: 강남구 이○○ 고객님"
+          />
+        </div>
+        <div>
+          <Label htmlFor="spaceType">공간 유형</Label>
+          <Input
+            id="spaceType"
+            name="spaceType"
+            defaultValue={review?.spaceType}
+            required
+            className="mt-2 h-10"
+            placeholder="예: 거실, 방·거실"
+          />
+        </div>
+        <div>
+          <Label htmlFor="order">정렬 순서</Label>
+          <Input
+            id="order"
+            name="order"
+            type="number"
+            defaultValue={review?.order ?? 0}
+            className="mt-2 h-10 max-w-24"
+          />
+        </div>
+      </section>
+      <div className="flex flex-col-reverse sm:flex-row gap-3 pt-4 border-t">
         <Button type="submit" className="min-h-11">{isEdit ? "수정" : "등록"}</Button>
         <Button type="button" variant="outline" onClick={() => router.back()} className="min-h-11">
           취소

@@ -88,22 +88,22 @@ export function AiDraftSection({
   };
 
   return (
-    <div className="space-y-4 rounded-lg border border-[#E5E0D9] bg-[#FAF8F5]/50 p-4">
+    <div className="space-y-4 rounded-lg border border-input bg-muted/20 p-4 md:p-5">
       {/* AI 초안 작성 영역 */}
       <div>
-        <div className="flex items-center justify-between gap-2 mb-2">
+        <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between mb-2">
           <span className="text-sm font-medium text-muted-foreground">
             AI로 초안 작성
           </span>
           <span className="text-xs text-muted-foreground">{getPromptHint()}</span>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-col sm:flex-row gap-2">
           <Textarea
             value={draft}
             onChange={(e) => setDraft(e.target.value)}
             placeholder={placeholder}
             rows={rows}
-            className="min-h-[100px] bg-white"
+            className="min-h-[100px] flex-1 bg-background"
           />
           <Button
             type="button"
@@ -112,7 +112,7 @@ export function AiDraftSection({
             onClick={handleGenerate}
             disabled={loading}
             title="AI 생성 후 아래 등록용에 바로 적용"
-            className="h-9 w-9 shrink-0 self-start"
+            className="h-10 w-10 shrink-0 self-start sm:self-start"
           >
             {loading ? (
               <Loader2 className="h-4 w-4 animate-spin" />
@@ -140,7 +140,7 @@ export function AiDraftSection({
           onChange={(e) => onChange(e.target.value)}
           required={required}
           rows={rows}
-          className="mt-1 min-h-[100px]"
+          className="mt-2 min-h-[100px]"
           placeholder={`직접 입력하거나, 위에서 ✨ 버튼으로 생성`}
         />
       </div>

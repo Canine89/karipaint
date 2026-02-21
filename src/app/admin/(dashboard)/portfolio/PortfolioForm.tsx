@@ -73,63 +73,70 @@ export function PortfolioForm({ portfolio }: PortfolioFormProps) {
           router.push("/admin/portfolio");
         }
       }}
-      className="space-y-6 max-w-2xl"
+      className="space-y-8 max-w-2xl"
     >
-      <div>
-        <Label htmlFor="title">제목</Label>
-        <Input
-          id="title"
-          name="title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          required
-          className="mt-1"
-        />
-      </div>
-      <div>
-        <Label htmlFor="category">카테고리</Label>
-        <select
-          id="category"
-          name="category"
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-          required
-          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm mt-1"
-        >
-          <option value="">선택</option>
-          {CATEGORIES.map((c) => (
-            <option key={c} value={c}>
-              {c}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div>
-        <Label htmlFor="region">지역</Label>
-        <Input
-          id="region"
-          name="region"
-          value={region}
-          onChange={(e) => setRegion(e.target.value)}
-          required
-          className="mt-1"
-          placeholder="예: 서울 강남구"
-        />
-      </div>
-      <div>
-        <Label htmlFor="duration">소요일</Label>
-        <Input
-          id="duration"
-          name="duration"
-          value={duration}
-          onChange={(e) => setDuration(e.target.value)}
-          required
-          className="mt-1"
-          placeholder="예: 3일"
-        />
-      </div>
-      <div>
-        <Label>설명</Label>
+      <section className="space-y-5">
+        <h2 className="text-sm font-semibold text-muted-foreground">기본 정보</h2>
+        <div className="space-y-4">
+          <div>
+            <Label htmlFor="title">제목</Label>
+            <Input
+              id="title"
+              name="title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              required
+              className="mt-2 h-10"
+            />
+          </div>
+          <div>
+            <Label htmlFor="category">카테고리</Label>
+            <select
+              id="category"
+              name="category"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              required
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 mt-2"
+            >
+              <option value="">선택</option>
+              {CATEGORIES.map((c) => (
+                <option key={c} value={c}>
+                  {c}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <Label htmlFor="region">지역</Label>
+            <Input
+              id="region"
+              name="region"
+              value={region}
+              onChange={(e) => setRegion(e.target.value)}
+              required
+              className="mt-2 h-10"
+              placeholder="예: 서울 강남구"
+            />
+          </div>
+          <div>
+            <Label htmlFor="duration">소요일</Label>
+            <Input
+              id="duration"
+              name="duration"
+              value={duration}
+              onChange={(e) => setDuration(e.target.value)}
+              required
+              className="mt-2 h-10"
+              placeholder="예: 3일"
+            />
+          </div>
+        </div>
+      </section>
+      <section className="space-y-5">
+        <h2 className="text-sm font-semibold text-muted-foreground">상세 내용</h2>
+        <div>
+          <Label>설명</Label>
         <AiDraftSection
           type="portfolio_desc"
           context={{
@@ -145,9 +152,9 @@ export function PortfolioForm({ portfolio }: PortfolioFormProps) {
           required
           rows={4}
         />
-      </div>
-      <div>
-        <Label>현장 사진</Label>
+        </div>
+        <div>
+          <Label>현장 사진</Label>
         <p className="text-sm text-muted-foreground mt-1 mb-2">
           모바일에서는 카메라로 바로 촬영, PC에서는 파일 선택 가능
         </p>
@@ -198,7 +205,7 @@ export function PortfolioForm({ portfolio }: PortfolioFormProps) {
             value={imageUrl}
             onChange={(e) => setImageUrl(e.target.value)}
             required
-            className="mt-1"
+            className="mt-2 h-10"
             placeholder="위에서 촬영/선택하거나 URL 직접 입력"
           />
         </div>
@@ -206,14 +213,15 @@ export function PortfolioForm({ portfolio }: PortfolioFormProps) {
       <div>
         <Label htmlFor="order">정렬 순서</Label>
         <Input
-          id="order"
-          name="order"
-          type="number"
-          defaultValue={portfolio?.order ?? 0}
-          className="mt-1"
+            id="order"
+            name="order"
+            type="number"
+            defaultValue={portfolio?.order ?? 0}
+          className="mt-2 h-10 max-w-24"
         />
       </div>
-      <div className="flex flex-col-reverse sm:flex-row gap-2 pt-2">
+      </section>
+      <div className="flex flex-col-reverse sm:flex-row gap-3 pt-4 border-t">
         <Button type="submit" className="min-h-11">{isEdit ? "수정" : "등록"}</Button>
         <Button
           type="button"

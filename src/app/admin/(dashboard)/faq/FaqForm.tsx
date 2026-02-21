@@ -35,43 +35,45 @@ export function FaqForm({ faq }: FaqFormProps) {
           router.push("/admin/faq");
         }
       }}
-      className="space-y-6 max-w-2xl"
+      className="space-y-8 max-w-2xl"
     >
-      <div>
-        <Label htmlFor="question">질문</Label>
-        <Input
-          id="question"
-          name="question"
-          value={question}
-          onChange={(e) => setQuestion(e.target.value)}
-          required
-          className="mt-1"
-        />
-      </div>
-      <div>
-        <Label>답변</Label>
-        <AiDraftSection
-          type="faq_answer"
-          context={{ question }}
-          value={answer}
-          onChange={setAnswer}
-          name="answer"
-          label="답변"
-          required
-          rows={4}
-        />
-      </div>
-      <div>
-        <Label htmlFor="order">정렬 순서</Label>
-        <Input
-          id="order"
-          name="order"
-          type="number"
-          defaultValue={faq?.order ?? 0}
-          className="mt-1"
-        />
-      </div>
-      <div className="flex flex-col-reverse sm:flex-row gap-2 pt-2">
+      <section className="space-y-5">
+        <div>
+          <Label htmlFor="question">질문</Label>
+          <Input
+            id="question"
+            name="question"
+            value={question}
+            onChange={(e) => setQuestion(e.target.value)}
+            required
+            className="mt-2 h-10"
+          />
+        </div>
+        <div>
+          <Label>답변</Label>
+          <AiDraftSection
+            type="faq_answer"
+            context={{ question }}
+            value={answer}
+            onChange={setAnswer}
+            name="answer"
+            label="답변"
+            required
+            rows={4}
+          />
+        </div>
+        <div>
+          <Label htmlFor="order">정렬 순서</Label>
+          <Input
+            id="order"
+            name="order"
+            type="number"
+            defaultValue={faq?.order ?? 0}
+            className="mt-2 h-10 max-w-24"
+          />
+        </div>
+      </section>
+      <div className="flex flex-col-reverse sm:flex-row gap-3 pt-4 border-t">
         <Button type="submit" className="min-h-11">{isEdit ? "수정" : "등록"}</Button>
         <Button type="button" variant="outline" onClick={() => router.back()} className="min-h-11">
           취소

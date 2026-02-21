@@ -4,6 +4,7 @@ import { Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -29,7 +30,10 @@ export function DeleteReviewButton({ id }: { id: string }) {
             이 후기를 삭제하면 복구할 수 없습니다.
           </DialogDescription>
         </DialogHeader>
-        <DialogFooter>
+        <DialogFooter className="gap-2 sm:gap-0">
+          <DialogClose asChild>
+            <Button variant="outline">취소</Button>
+          </DialogClose>
           <form action={deleteReview.bind(null, id)}>
             <Button type="submit" variant="destructive">
               삭제
