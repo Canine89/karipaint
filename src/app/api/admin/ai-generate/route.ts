@@ -5,10 +5,15 @@ import { generateContent, type GenerateType } from "@/lib/openai/client";
 
 const SESSION_COOKIE_NAME = "__session";
 
-async function verifyAuth(request: NextRequest): Promise<boolean> {
-  if (process.env.NEXT_PUBLIC_USE_FIREBASE !== "true") {
-    return true;
-  }
+const IS_DEPLOYED =
+  process.env.VERCEL_ENV === "production" ||
+  process.env.VERCEL_ENV === "preview";
+
+async function verifyAuth(_request: NextRequest): Promise<boolean> {
+  const requireAuth =
+    IS_DEPLOYED ||
+    process.env.NEXT_PUBLIC_USE_FIREBASE === "true";
+  if (!requireAuth) return true;
   const cookieStore = await cookies();
   const sessionCookie = cookieStore.get(SESSION_COOKIE_NAME)?.value;
   if (!sessionCookie) return false;

@@ -1,10 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { AiDraftSection } from "@/components/admin/AiDraftSection";
 import type { Review } from "@/lib/domain/types";
 import { createReview, updateReview } from "../../actions";
 
@@ -15,6 +16,7 @@ interface ReviewFormProps {
 export function ReviewForm({ review }: ReviewFormProps) {
   const router = useRouter();
   const isEdit = !!review;
+  const [quote, setQuote] = useState(review?.quote ?? "");
 
   return (
     <form
@@ -36,15 +38,16 @@ export function ReviewForm({ review }: ReviewFormProps) {
       className="space-y-6 max-w-2xl"
     >
       <div>
-        <Label htmlFor="quote">후기 내용</Label>
-        <Textarea
-          id="quote"
+        <Label>후기 내용</Label>
+        <AiDraftSection
+          type="review_polish"
+          value={quote}
+          onChange={setQuote}
           name="quote"
-          defaultValue={review?.quote}
+          label="후기 내용"
+          placeholder="후기 원문 또는 메모를 입력한 후 ✨ 버튼으로 문장 다듬기"
           required
           rows={4}
-          className="mt-1"
-          placeholder="고객 후기 원문을 입력하세요"
         />
       </div>
       <div>

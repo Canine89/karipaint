@@ -1,10 +1,12 @@
 "use client";
 
+import { useState, useRef } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { AiDraftSection } from "@/components/admin/AiDraftSection";
 import type { Portfolio } from "@/lib/domain/types";
 import { createPortfolio, updatePortfolio } from "../../actions";
 
@@ -16,7 +18,40 @@ const CATEGORIES = ["인테리어 도장", "외벽 도장", "기타"];
 
 export function PortfolioForm({ portfolio }: PortfolioFormProps) {
   const router = useRouter();
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const isEdit = !!portfolio;
+  const [title, setTitle] = useState(portfolio?.title ?? "");
+  const [description, setDescription] = useState(portfolio?.description ?? "");
+  const [category, setCategory] = useState(portfolio?.category ?? "");
+  const [region, setRegion] = useState(portfolio?.region ?? "");
+  const [duration, setDuration] = useState(portfolio?.duration ?? "");
+  const [imageUrl, setImageUrl] = useState(portfolio?.imageUrl ?? "");
+  const [uploading, setUploading] = useState(false);
+
+  const handleImageSelect = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file || !file.type.startsWith("image/")) return;
+    setUploading(true);
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+      const res = await fetch("/api/admin/upload", {
+        method: "POST",
+        body: formData,
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error ?? "업로드 실패");
+      }
+      const { url } = await res.json();
+      setImageUrl(url);
+    } catch (err) {
+      alert(err instanceof Error ? err.message : "업로드 실패");
+    } finally {
+      setUploading(false);
+      e.target.value = "";
+    }
+  };
 
   return (
     <form
@@ -45,19 +80,9 @@ export function PortfolioForm({ portfolio }: PortfolioFormProps) {
         <Input
           id="title"
           name="title"
-          defaultValue={portfolio?.title}
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
           required
-          className="mt-1"
-        />
-      </div>
-      <div>
-        <Label htmlFor="description">설명</Label>
-        <Textarea
-          id="description"
-          name="description"
-          defaultValue={portfolio?.description}
-          required
-          rows={4}
           className="mt-1"
         />
       </div>
@@ -66,7 +91,8 @@ export function PortfolioForm({ portfolio }: PortfolioFormProps) {
         <select
           id="category"
           name="category"
-          defaultValue={portfolio?.category}
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
           required
           className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm mt-1"
         >
@@ -83,7 +109,8 @@ export function PortfolioForm({ portfolio }: PortfolioFormProps) {
         <Input
           id="region"
           name="region"
-          defaultValue={portfolio?.region}
+          value={region}
+          onChange={(e) => setRegion(e.target.value)}
           required
           className="mt-1"
           placeholder="예: 서울 강남구"
@@ -94,23 +121,87 @@ export function PortfolioForm({ portfolio }: PortfolioFormProps) {
         <Input
           id="duration"
           name="duration"
-          defaultValue={portfolio?.duration}
+          value={duration}
+          onChange={(e) => setDuration(e.target.value)}
           required
           className="mt-1"
           placeholder="예: 3일"
         />
       </div>
       <div>
-        <Label htmlFor="imageUrl">이미지 URL</Label>
-        <Input
-          id="imageUrl"
-          name="imageUrl"
-          type="url"
-          defaultValue={portfolio?.imageUrl}
+        <Label>설명</Label>
+        <AiDraftSection
+          type="portfolio_desc"
+          context={{
+            region,
+            category,
+            duration,
+            space: title || category,
+          }}
+          value={description}
+          onChange={setDescription}
+          name="description"
+          label="설명"
           required
-          className="mt-1"
-          placeholder="https://..."
+          rows={4}
         />
+      </div>
+      <div>
+        <Label>현장 사진</Label>
+        <p className="text-sm text-muted-foreground mt-1 mb-2">
+          모바일에서는 카메라로 바로 촬영, PC에서는 파일 선택 가능
+        </p>
+        <div className="space-y-3">
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/*"
+            capture="environment"
+            className="hidden"
+            onChange={handleImageSelect}
+          />
+          <div className="flex gap-2 flex-wrap">
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => fileInputRef.current?.click()}
+              disabled={uploading}
+            >
+              {uploading ? "업로드 중..." : "📷 사진 촬영 / 선택"}
+            </Button>
+            {imageUrl && (
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                onClick={() => setImageUrl("")}
+              >
+                제거
+              </Button>
+            )}
+          </div>
+          {imageUrl ? (
+            <div className="relative w-full max-w-xs aspect-video rounded-lg overflow-hidden border border-input bg-muted">
+              <Image
+                src={imageUrl}
+                alt="미리보기"
+                fill
+                className="object-cover"
+                unoptimized
+              />
+            </div>
+          ) : null}
+          <Input
+            id="imageUrl"
+            name="imageUrl"
+            type="url"
+            value={imageUrl}
+            onChange={(e) => setImageUrl(e.target.value)}
+            required
+            className="mt-1"
+            placeholder="위에서 촬영/선택하거나 URL 직접 입력"
+          />
+        </div>
       </div>
       <div>
         <Label htmlFor="order">정렬 순서</Label>

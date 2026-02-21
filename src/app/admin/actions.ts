@@ -12,6 +12,8 @@ export async function createPortfolio(data: CreatePortfolioInput) {
   await portfolioRepository.create(data);
   revalidatePath("/admin/portfolio");
   revalidatePath("/admin");
+  revalidatePath("/");
+  revalidatePath("/portfolio");
 }
 
 export async function updatePortfolio(id: string, data: UpdatePortfolioInput) {
@@ -19,24 +21,30 @@ export async function updatePortfolio(id: string, data: UpdatePortfolioInput) {
   revalidatePath("/admin/portfolio");
   revalidatePath(`/admin/portfolio/${id}`);
   revalidatePath("/admin");
+  revalidatePath("/");
+  revalidatePath("/portfolio");
 }
 
 export async function deletePortfolio(id: string) {
   await portfolioRepository.delete(id);
   revalidatePath("/admin/portfolio");
   revalidatePath("/admin");
+  revalidatePath("/");
+  revalidatePath("/portfolio");
 }
 
 export async function createFaq(data: CreateFaqInput) {
   await faqRepository.create(data);
   revalidatePath("/admin/faq");
   revalidatePath("/admin");
+  revalidatePath("/inquiry");
 }
 
 export async function updateFaq(id: string, data: UpdateFaqInput) {
   await faqRepository.update(id, data);
   revalidatePath("/admin/faq");
   revalidatePath("/admin");
+  revalidatePath("/inquiry");
 }
 
 export async function deleteFaq(id: string) {
@@ -50,16 +58,19 @@ export async function createReview(data: CreateReviewInput) {
   await reviewRepository.create(data);
   revalidatePath("/admin/reviews");
   revalidatePath("/admin");
+  revalidatePath("/");
 }
 
 export async function updateReview(id: string, data: UpdateReviewInput) {
   await reviewRepository.update(id, data);
   revalidatePath("/admin/reviews");
   revalidatePath("/admin");
+  revalidatePath("/");
 }
 
 export async function deleteReview(id: string) {
   await reviewRepository.delete(id);
   revalidatePath("/admin/reviews");
   revalidatePath("/admin");
+  revalidatePath("/");
 }

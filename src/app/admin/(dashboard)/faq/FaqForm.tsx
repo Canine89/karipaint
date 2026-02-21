@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { AiTextarea } from "@/components/admin/AiTextarea";
+import { AiDraftSection } from "@/components/admin/AiDraftSection";
 import type { Faq } from "@/lib/domain/types";
 import { createFaq, updateFaq } from "../../actions";
 
@@ -49,17 +49,16 @@ export function FaqForm({ faq }: FaqFormProps) {
         />
       </div>
       <div>
-        <Label htmlFor="answer">답변</Label>
-        <AiTextarea
-          id="answer"
-          name="answer"
-          value={answer}
-          onChange={setAnswer}
+        <Label>답변</Label>
+        <AiDraftSection
           type="faq_answer"
           context={{ question }}
+          value={answer}
+          onChange={setAnswer}
+          name="answer"
+          label="답변"
           required
           rows={4}
-          className="mt-1"
         />
       </div>
       <div>

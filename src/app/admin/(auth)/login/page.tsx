@@ -2,6 +2,10 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { AdminLoginForm } from "./login-form";
 
+const IS_DEPLOYED =
+  process.env.VERCEL_ENV === "production" ||
+  process.env.VERCEL_ENV === "preview";
+
 export default function AdminLoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-muted/30">
@@ -13,7 +17,7 @@ export default function AdminLoginPage() {
           </p>
         </div>
         <Suspense fallback={<div className="animate-pulse h-32 bg-muted rounded" />}>
-          <AdminLoginForm />
+          <AdminLoginForm isDeployed={IS_DEPLOYED} />
         </Suspense>
         <p className="text-center text-sm text-muted-foreground">
           <Link href="/" className="hover:text-foreground">

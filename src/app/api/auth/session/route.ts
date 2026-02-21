@@ -19,6 +19,25 @@ export async function POST(request: NextRequest) {
     }
 
     const decoded = await adminAuth.verifyIdToken(token);
+    const userEmail = (decoded as { email?: string }).email;
+
+    const allowedEmailsRaw = process.env.ADMIN_EMAILS ?? "";
+    if (allowedEmailsRaw) {
+      const allowedEmails = allowedEmailsRaw
+        .split(",")
+        .map((e) => e.trim().toLowerCase())
+        .filter(Boolean);
+      if (allowedEmails.length > 0) {
+        const normalizedUser = userEmail?.trim().toLowerCase() ?? "";
+        if (!userEmail || !allowedEmails.includes(normalizedUser)) {
+          return NextResponse.json(
+            { error: "등록된 관리자 이메일이 아닙니다." },
+            { status: 403 }
+          );
+        }
+      }
+    }
+
     const sessionCookie = await adminAuth.createSessionCookie(token, {
       expiresIn: SESSION_MAX_AGE * 1000,
     });

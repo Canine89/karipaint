@@ -7,9 +7,25 @@ import { MockPortfolioRepository } from "@/lib/data/mock/mock-portfolio.reposito
 import { MockFaqRepository } from "@/lib/data/mock/mock-faq.repository";
 import { MockReviewRepository } from "@/lib/data/mock/mock-review.repository";
 
-const USE_FIREBASE =
+/** Vercel 배포(production/preview) 환경인지 */
+const IS_DEPLOYED =
+  process.env.VERCEL_ENV === "production" ||
+  process.env.VERCEL_ENV === "preview";
+
+const FIREBASE_CONFIGURED =
   process.env.NEXT_PUBLIC_USE_FIREBASE === "true" &&
   !!process.env.FIREBASE_PROJECT_ID;
+
+/** 배포 환경에서는 Firebase 필수, 로컬에서는 설정 시 Firebase / 미설정 시 Mock */
+const USE_FIREBASE = FIREBASE_CONFIGURED;
+
+function assertFirebaseForDeploy(): void {
+  if (IS_DEPLOYED && !FIREBASE_CONFIGURED) {
+    throw new Error(
+      "배포 환경에서는 Firebase가 필수입니다. Vercel 환경 변수에 NEXT_PUBLIC_USE_FIREBASE, FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY 등을 설정해주세요."
+    );
+  }
+}
 
 let _portfolioRepo: PortfolioRepository;
 let _faqRepo: FaqRepository;
@@ -23,6 +39,7 @@ async function getPortfolioRepository(): Promise<PortfolioRepository> {
     );
     _portfolioRepo = new FirestorePortfolioRepository();
   } else {
+    assertFirebaseForDeploy();
     _portfolioRepo = new MockPortfolioRepository();
   }
   return _portfolioRepo;
@@ -36,6 +53,7 @@ async function getFaqRepository(): Promise<FaqRepository> {
     );
     _faqRepo = new FirestoreFaqRepository();
   } else {
+    assertFirebaseForDeploy();
     _faqRepo = new MockFaqRepository();
   }
   return _faqRepo;
@@ -49,6 +67,7 @@ async function getReviewRepository(): Promise<ReviewRepository> {
     );
     _reviewRepo = new FirestoreReviewRepository();
   } else {
+    assertFirebaseForDeploy();
     _reviewRepo = new MockReviewRepository();
   }
   return _reviewRepo;

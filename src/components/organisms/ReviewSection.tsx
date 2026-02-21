@@ -1,7 +1,17 @@
 "use client";
 
+import { useMemo } from "react";
 import { motion } from "framer-motion";
 import type { Review } from "@/lib/domain/types";
+
+function shuffle<T>(arr: T[]): T[] {
+  const result = [...arr];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
 
 interface ReviewSectionProps {
   items: Review[];
@@ -9,7 +19,10 @@ interface ReviewSectionProps {
 }
 
 export function ReviewSection({ items, limit = 6 }: ReviewSectionProps) {
-  const displayItems = items.slice(0, limit);
+  const displayItems = useMemo(
+    () => shuffle(items).slice(0, limit),
+    [items, limit]
+  );
 
   if (displayItems.length === 0) {
     return (

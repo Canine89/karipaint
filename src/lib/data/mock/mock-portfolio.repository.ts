@@ -63,15 +63,23 @@ const MOCK_PORTFOLIOS: Portfolio[] = [
   },
 ];
 
-export class MockPortfolioRepository implements PortfolioRepository {
-  private items = [...MOCK_PORTFOLIOS];
+const STORE_KEY = "__karipaint_mock_portfolios__";
 
+function getStore(): Portfolio[] {
+  const g = globalThis as unknown as { [key: string]: Portfolio[] | undefined };
+  if (!g[STORE_KEY]) {
+    g[STORE_KEY] = [...MOCK_PORTFOLIOS];
+  }
+  return g[STORE_KEY];
+}
+
+export class MockPortfolioRepository implements PortfolioRepository {
   async getAll(): Promise<Portfolio[]> {
-    return [...this.items].sort((a, b) => a.order - b.order);
+    return [...getStore()].sort((a, b) => a.order - b.order);
   }
 
   async getById(id: string): Promise<Portfolio | null> {
-    return this.items.find((p) => p.id === id) ?? null;
+    return getStore().find((p) => p.id === id) ?? null;
   }
 
   async create(data: CreatePortfolioInput): Promise<Portfolio> {
@@ -81,19 +89,21 @@ export class MockPortfolioRepository implements PortfolioRepository {
       ...data,
       createdAt: new Date().toISOString(),
     };
-    this.items.push(newItem);
+    getStore().push(newItem);
     return newItem;
   }
 
   async update(id: string, data: UpdatePortfolioInput): Promise<Portfolio> {
-    const idx = this.items.findIndex((p) => p.id === id);
+    const items = getStore();
+    const idx = items.findIndex((p) => p.id === id);
     if (idx === -1) throw new Error("Portfolio not found");
-    this.items[idx] = { ...this.items[idx], ...data };
-    return this.items[idx];
+    items[idx] = { ...items[idx], ...data };
+    return items[idx];
   }
 
   async delete(id: string): Promise<void> {
-    const idx = this.items.findIndex((p) => p.id === id);
-    if (idx !== -1) this.items.splice(idx, 1);
+    const items = getStore();
+    const idx = items.findIndex((p) => p.id === id);
+    if (idx !== -1) items.splice(idx, 1);
   }
 }

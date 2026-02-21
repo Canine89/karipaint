@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
+const IS_DEPLOYED =
+  process.env.VERCEL_ENV === "production" ||
+  process.env.VERCEL_ENV === "preview";
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
@@ -12,8 +16,13 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const useFirebase = process.env.NEXT_PUBLIC_USE_FIREBASE === "true";
-  if (!useFirebase) {
+  // 배포 환경: 항상 로그인 필수
+  // 로컬: Firebase 미설정 시 로그인 없이 접근 허용 (테스트용)
+  const requireAuth =
+    IS_DEPLOYED ||
+    process.env.NEXT_PUBLIC_USE_FIREBASE === "true";
+
+  if (!requireAuth) {
     return NextResponse.next();
   }
 
