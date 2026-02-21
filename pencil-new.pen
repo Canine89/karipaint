@@ -1,0 +1,5332 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "KARI Paint Design System",
+      "clip": true,
+      "width": 800,
+      "fill": "#FAF8F5",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 32,
+      "children": [
+        {
+          "type": "frame",
+          "id": "MBDow",
+          "name": "header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 4,
+          "children": [
+            {
+              "type": "text",
+              "id": "p6sm0",
+              "name": "title",
+              "fill": "#722F37",
+              "content": "KARI Paint Design System",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "jvmyd",
+              "name": "subtitle",
+              "fill": "#6B6359",
+              "content": "아토믹 디자인 패턴 기반 재사용 가능 디자인 문서",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "zF4h2",
+              "name": "sourceRef",
+              "fill": "#9E9E9E",
+              "content": "참조: blog.naver.com/karipaint",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "uH5NU",
+          "name": "brandCard",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "aX6MT",
+              "name": "brandTitle",
+              "fill": "#722F37",
+              "content": "브랜드 개요",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "01wP4",
+              "name": "brandText",
+              "fill": "#212121",
+              "content": "카리페인트 (KARI Paint) | 대표 박용규 | 도장 공사업",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "xMAM0",
+              "name": "brandValues",
+              "fill": "#6B6359",
+              "content": "핵심 가치: 성취감, 감동, 지속적 성장, 2대 계승, 공간 가치",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "P0QcH",
+              "name": "brandSub",
+              "fill": "#6B6359",
+              "content": "2023년 설립 | 건설업 도장 공사",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "tOxC8",
+              "name": "brandTone",
+              "fill": "#6B6359",
+              "content": "톤앤매너: 장인정신형, 감성 중심, 친근하고 부담 없는",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "9hPNW",
+              "name": "brandPrinciple",
+              "fill": "#6B6359",
+              "content": "디자인 원칙: 재사용성, 일관성, 접근성, 확장성",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "PFFvV",
+          "name": "atomicSection",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "GpkiU",
+              "name": "atomicTitle",
+              "fill": "#722F37",
+              "content": "Atomic Design 계층",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "zlukT",
+              "name": "atomicFlow",
+              "width": "fill_container",
+              "gap": 8,
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "011nd",
+                  "name": "atomBox",
+                  "width": 100,
+                  "height": 60,
+                  "fill": "#722F37",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "padding": 12,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "RQTbE",
+                      "name": "atomLabel",
+                      "fill": "#FFFFFF",
+                      "content": "Atoms",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "oFV6y",
+                  "name": "arrow1",
+                  "fill": "#6B6359",
+                  "content": "→",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "udDi1",
+                  "name": "molBox",
+                  "width": 100,
+                  "height": 60,
+                  "fill": "#8B3D47",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "padding": 12,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YyL82",
+                      "name": "molLabel",
+                      "fill": "#FFFFFF",
+                      "content": "Molecules",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "fIZ16",
+                  "name": "arrow2",
+                  "fill": "#6B6359",
+                  "content": "→",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "KQsKt",
+                  "name": "orgBox",
+                  "width": 100,
+                  "height": 60,
+                  "fill": "#B8860B",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "padding": 12,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cpWrL",
+                      "name": "orgLabel",
+                      "fill": "#FFFFFF",
+                      "content": "Organisms",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "ilLCE",
+                  "name": "arrow3",
+                  "fill": "#6B6359",
+                  "content": "→",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "yNvNB",
+                  "name": "tmplBox",
+                  "width": 100,
+                  "height": 60,
+                  "fill": "#8B6914",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "padding": 12,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "1hZwn",
+                      "name": "tmplLabel",
+                      "fill": "#FFFFFF",
+                      "content": "Templates",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "Zf6va",
+                  "name": "arrow4",
+                  "fill": "#6B6359",
+                  "content": "→",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "TXd6r",
+                  "name": "pageBox",
+                  "width": 80,
+                  "height": 60,
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "padding": 12,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Vsk29",
+                      "name": "pageLabel",
+                      "fill": "#FFFFFF",
+                      "content": "Pages",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "qTt5W",
+              "name": "atomicExample",
+              "fill": "#6B6359",
+              "content": "Atoms: 버튼·라벨·아이콘 | Molecules: 버튼+아이콘·카드헤더 | Organisms: 헤더·푸터·히어로",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "zTz8T",
+          "name": "colorSection",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "vN4dd",
+              "name": "colorTitle",
+              "fill": "#722F37",
+              "content": "Design Tokens - 색상",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "PjBf3",
+              "name": "colorRow",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "h0LOL",
+                  "name": "swatch1",
+                  "width": 80,
+                  "height": 80,
+                  "fill": "#722F37",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "41KKp",
+                      "name": "swatch1Label",
+                      "fill": "#FFFFFF",
+                      "content": "Primary #722F37",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ekiRq",
+                  "name": "swatch2",
+                  "width": 80,
+                  "height": 80,
+                  "fill": "#B8860B",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "9yGTJ",
+                      "name": "swatch2Label",
+                      "fill": "#FFFFFF",
+                      "content": "Secondary #B8860B",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "m8mlQ",
+                  "name": "swatch3",
+                  "width": 80,
+                  "height": 80,
+                  "fill": "#8B3D47",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fXr5l",
+                      "name": "swatch3Label",
+                      "fill": "#FFFFFF",
+                      "content": "Primary Light #8B3D47",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "cSxCp",
+                  "name": "swatch4",
+                  "width": 80,
+                  "height": 80,
+                  "fill": "#D4AF37",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "nZHYY",
+                      "name": "swatch4Label",
+                      "fill": "#616161",
+                      "content": "Secondary Light #D4AF37",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "W8tms",
+                  "name": "swatch5",
+                  "width": 80,
+                  "height": 80,
+                  "fill": "#FAF8F5",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#D4CFC6"
+                  },
+                  "layout": "vertical",
+                  "gap": 4,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Gr1rc",
+                      "name": "swatch5Label",
+                      "fill": "#6B6359",
+                      "content": "Background #FAF8F5",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "NjapV",
+              "name": "colorNote",
+              "fill": "#6B6359",
+              "content": "COLOR_PALETTE_LOGO_BASED.md 참조",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "qiQCO",
+              "name": "semanticRow",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "22SfR",
+                  "name": "semanticLabel",
+                  "fill": "#6B6359",
+                  "content": "Semantic",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "J777G",
+                  "name": "swatchSuccess",
+                  "width": 60,
+                  "height": 40,
+                  "fill": "#2E7D32",
+                  "cornerRadius": 4,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "LEQju",
+                      "name": "swatchSuccessL",
+                      "fill": "#FFFFFF",
+                      "content": "success",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "I5icL",
+                  "name": "swatchWarn",
+                  "width": 60,
+                  "height": 40,
+                  "fill": "#B8860B",
+                  "cornerRadius": 4,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "sHUj6",
+                      "name": "swatchWarnL",
+                      "fill": "#FFFFFF",
+                      "content": "warning",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "xplFC",
+                  "name": "swatchErr",
+                  "width": 60,
+                  "height": 40,
+                  "fill": "#8B2635",
+                  "cornerRadius": 4,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "itYbj",
+                      "name": "swatchErrL",
+                      "fill": "#FFFFFF",
+                      "content": "error",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Ss7Lx",
+          "name": "compSection",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "Buzr2",
+              "name": "compTitle",
+              "fill": "#722F37",
+              "content": "주요 컴포넌트",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "u1zfe",
+              "name": "compGrid",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "FCeWN",
+                  "name": "atomsCol",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SD9nG",
+                      "name": "atomsHead",
+                      "fill": "#722F37",
+                      "content": "Atoms",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ESwBa",
+                      "name": "atomsList",
+                      "fill": "#616161",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Button, ColorSwatch, Icon, Input, Label, Link, Badge, Divider, Spacer",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rnRKR",
+                  "name": "molCol",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pWfV2",
+                      "name": "molHead",
+                      "fill": "#8B3D47",
+                      "content": "Molecules",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "qseZm",
+                      "name": "molList",
+                      "fill": "#616161",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "SearchBar, FormField, ProductCard, ContactCta, NavItem, CardHeader, ColorPreview",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "E9eCu",
+                  "name": "orgCol",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "i9qUB",
+                      "name": "orgHead",
+                      "fill": "#B8860B",
+                      "content": "Organisms",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "sIxL9",
+                      "name": "orgList",
+                      "fill": "#616161",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Header, Footer, Hero, ProductGrid, ContactForm, ColorPaletteSection, TrustBadges, InquiryBanner",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "xBSN8",
+                  "name": "tmplCol",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hh0H8",
+                      "name": "tmplHead",
+                      "fill": "#8B6914",
+                      "content": "Templates",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "DMgIA",
+                      "name": "tmplList",
+                      "fill": "#616161",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "HomeTemplate, ProductList, ProductDetail, ContactTemplate",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "v4haO",
+                  "name": "pageCol",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dxBfU",
+                      "name": "pageHead",
+                      "fill": "#1A1A1A",
+                      "content": "Pages",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "sgjYX",
+                      "name": "pageList",
+                      "fill": "#616161",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "홈, 제품목록, 제품상세, 문의/견적",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "5IVCc",
+          "name": "docStructSection",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "Z6aSn",
+              "name": "docStructTitle",
+              "fill": "#722F37",
+              "content": "문서 구조 (docs/)",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "NN0sG",
+              "name": "docStructList",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vREvW",
+                  "name": "doc1",
+                  "fill": "#1A1A1A",
+                  "content": "DESIGN_SYSTEM.md, BRAND_STORY.md, COLOR_PALETTE_LOGO_BASED.md",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "HsQVa",
+                  "name": "doc2",
+                  "fill": "#1A1A1A",
+                  "content": "COMPONENT_INDEX.md | atoms/, molecules/, organisms/, templates/, pages/",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "v9Sq5",
+                  "name": "doc3",
+                  "fill": "#6B6359",
+                  "content": "design-tokens.json (루트) | CONTACT_LINKS.md",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lP7VJ",
+          "name": "inquirySection",
+          "width": "fill_container",
+          "fill": "#722F37",
+          "cornerRadius": 8,
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "23Atx",
+              "name": "inquiryTitle",
+              "fill": "#FFFFFF",
+              "content": "견적 문의 방법 안내",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "aB5zm",
+              "name": "inquirySub",
+              "fill": "#FFFFFF",
+              "content": "편하신 방법으로 언제든지 연락 주세요",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "FZQKW",
+              "name": "inquiryChannels",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "0l6PC",
+                  "name": "kakaoBtn",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#FEE500",
+                  "cornerRadius": 8,
+                  "gap": 8,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jUshH",
+                      "name": "kakaoLabel",
+                      "fill": "#000000",
+                      "content": "카카오톡 1:1",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ekkXh",
+                  "name": "instaBtn",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#E4405F",
+                  "cornerRadius": 8,
+                  "gap": 8,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "6Ireq",
+                      "name": "instaLabel",
+                      "fill": "#FFFFFF",
+                      "content": "인스타 DM",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "bT3YE",
+                  "name": "talkBtn",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#03C75A",
+                  "cornerRadius": 8,
+                  "gap": 8,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rZbz9",
+                      "name": "talkLabel",
+                      "fill": "#FFFFFF",
+                      "content": "네이버 톡톡",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "e94oq",
+              "name": "inquiryFooter",
+              "fill": "#C9A8A8",
+              "content": "빠르고 친절하게 상담 도와드리겠습니다.",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "bUwlu",
+          "name": "typographySection",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "7mWSm",
+              "name": "typoTitle",
+              "fill": "#722F37",
+              "content": "타이포그래피",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "JJlve",
+              "name": "fontFamilyRow",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ZFUmT",
+                  "name": "fontFamilyLabel",
+                  "fill": "#616161",
+                  "content": "폰트 패밀리",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "o6sza",
+                  "name": "fontFamilyVal",
+                  "fill": "#212121",
+                  "content": "Primary: Pretendard, Noto Sans KR | Heading: 동일 | Mono: JetBrains Mono",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "QFzCG",
+              "name": "fontSizeRow",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ySeGN",
+                  "name": "fontSizeLabel",
+                  "fill": "#616161",
+                  "content": "폰트 크기 (rem)",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "hHUxP",
+                  "name": "fontSizeGrid",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ToCml",
+                      "name": "fs1",
+                      "fill": "#212121",
+                      "content": "xs: 12px",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "APTWi",
+                      "name": "fs2",
+                      "fill": "#212121",
+                      "content": "sm: 14px",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ThD2A",
+                      "name": "fs3",
+                      "fill": "#212121",
+                      "content": "base: 16px",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "uAtNW",
+                      "name": "fs4",
+                      "fill": "#212121",
+                      "content": "lg: 18px",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lYawA",
+                      "name": "fs5",
+                      "fill": "#212121",
+                      "content": "2xl: 24px",
+                      "fontFamily": "Inter",
+                      "fontSize": 24,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "OGx3d",
+                      "name": "fs6",
+                      "fill": "#212121",
+                      "content": "xl: 20px",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "UWgaX",
+                      "name": "fs7",
+                      "fill": "#212121",
+                      "content": "3xl: 32px",
+                      "fontFamily": "Inter",
+                      "fontSize": 32,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "49Yod",
+              "name": "fontWeightRow",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "tYGkt",
+                  "name": "fontWeightLabel",
+                  "fill": "#616161",
+                  "content": "폰트 굵기",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "Qrw9s",
+                  "name": "fontWeightVal",
+                  "fill": "#212121",
+                  "content": "light(300), regular(400), medium(500), semibold(600), bold(700)",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "aCTOA",
+              "name": "lineHeightRow",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "S9oNY",
+                  "name": "lineHeightLabel",
+                  "fill": "#616161",
+                  "content": "줄 높이 (lineHeight)",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "eKUax",
+                  "name": "lineHeightVal",
+                  "fill": "#212121",
+                  "content": "tight(1.2), normal(1.5), relaxed(1.75), loose(2)",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "JCQuH",
+              "name": "typoUsageRow",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "B2sdN",
+                  "name": "typoUsageLabel",
+                  "fill": "#616161",
+                  "content": "용도별 폰트 크기",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "FB3We",
+                  "name": "typoUsageVal",
+                  "fill": "#212121",
+                  "content": "제목 H1: 32-48px | H2: 24px | H3: 20px | 본문: 16px | 캡션: 12-14px",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Zznka",
+          "name": "spacingSection",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "YvXl8",
+              "name": "spacingTitle",
+              "fill": "#722F37",
+              "content": "간격 (Spacing)",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "vmqkg",
+              "name": "spacingUnit",
+              "fill": "#212121",
+              "content": "기본 단위: 4px",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "gOF9r",
+              "name": "spacingScale",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "KSwPh",
+                  "name": "spacingRow1",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "bwTwA",
+                      "name": "sp1",
+                      "width": 60,
+                      "height": 24,
+                      "fill": "#EEEEEE",
+                      "cornerRadius": 4,
+                      "padding": [
+                        0,
+                        8
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "2hMv4",
+                          "name": "sp1Text",
+                          "fill": "#616161",
+                          "content": "1: 4px",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "fCH8U",
+                      "name": "sp2",
+                      "width": 60,
+                      "height": 24,
+                      "fill": "#EEEEEE",
+                      "cornerRadius": 4,
+                      "padding": [
+                        0,
+                        8
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "3aneq",
+                          "name": "sp2Text",
+                          "fill": "#616161",
+                          "content": "2: 8px",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Rlsoh",
+                      "name": "sp3",
+                      "width": 70,
+                      "height": 24,
+                      "fill": "#EEEEEE",
+                      "cornerRadius": 4,
+                      "padding": [
+                        0,
+                        8
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Ef1Qg",
+                          "name": "sp3Text",
+                          "fill": "#616161",
+                          "content": "3: 12px",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "EWzQy",
+                      "name": "sp4",
+                      "width": 70,
+                      "height": 24,
+                      "fill": "#EEEEEE",
+                      "cornerRadius": 4,
+                      "padding": [
+                        0,
+                        8
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Sjq1o",
+                          "name": "sp4Text",
+                          "fill": "#616161",
+                          "content": "4: 16px",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Zs858",
+                      "name": "sp5",
+                      "width": 70,
+                      "height": 24,
+                      "fill": "#EEEEEE",
+                      "cornerRadius": 4,
+                      "padding": [
+                        0,
+                        8
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "bK3aM",
+                          "name": "sp5Text",
+                          "fill": "#616161",
+                          "content": "6: 24px",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Teqeh",
+                      "name": "sp6",
+                      "width": 70,
+                      "height": 24,
+                      "fill": "#EEEEEE",
+                      "cornerRadius": 4,
+                      "padding": [
+                        0,
+                        8
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lW27j",
+                          "name": "sp6Text",
+                          "fill": "#616161",
+                          "content": "8: 32px",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "WdDYx",
+                  "name": "spacingRow2",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Pcafn",
+                      "name": "sp7",
+                      "width": 70,
+                      "height": 24,
+                      "fill": "#EEEEEE",
+                      "cornerRadius": 4,
+                      "padding": [
+                        0,
+                        8
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "OCssg",
+                          "name": "sp7T",
+                          "fill": "#616161",
+                          "content": "10: 40px",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "7oHxh",
+                      "name": "sp8",
+                      "width": 70,
+                      "height": 24,
+                      "fill": "#EEEEEE",
+                      "cornerRadius": 4,
+                      "padding": [
+                        0,
+                        8
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ap5nH",
+                          "name": "sp8T",
+                          "fill": "#616161",
+                          "content": "12: 48px",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "VnZPE",
+                      "name": "sp9",
+                      "width": 70,
+                      "height": 24,
+                      "fill": "#EEEEEE",
+                      "cornerRadius": 4,
+                      "padding": [
+                        0,
+                        8
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "l3UeV",
+                          "name": "sp9T",
+                          "fill": "#616161",
+                          "content": "16: 64px",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "QIpi8",
+                      "name": "sp10",
+                      "width": 70,
+                      "height": 24,
+                      "fill": "#EEEEEE",
+                      "cornerRadius": 4,
+                      "padding": [
+                        0,
+                        8
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "qzHc1",
+                          "name": "sp10T",
+                          "fill": "#616161",
+                          "content": "24: 96px",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fgQJ4",
+              "name": "compSpacingRow",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "MABUc",
+                  "name": "compSpacingLabel",
+                  "fill": "#616161",
+                  "content": "컴포넌트별 간격",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "yWvzv",
+                  "name": "compSpacingTable",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bXmfK",
+                      "name": "cs1",
+                      "fill": "#212121",
+                      "content": "카드/섹션 gap: 12-24px, padding: 20-32px",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "OFhXl",
+                      "name": "cs2",
+                      "fill": "#212121",
+                      "content": "폼 필드 gap: 16px",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Swj23",
+                      "name": "cs3",
+                      "fill": "#212121",
+                      "content": "버튼 그룹 gap: 12px",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZHP19",
+                      "name": "cs4",
+                      "fill": "#212121",
+                      "content": "카드 그리드 gap: 16-24px",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "D3Zxf",
+                      "name": "cs5",
+                      "fill": "#212121",
+                      "content": "페이지 섹션 gap: 24-32px",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Ll2H0",
+          "name": "radiusSection",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "5POm4",
+              "name": "radiusTitle",
+              "fill": "#722F37",
+              "content": "모서리 (Border Radius)",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "H6j1B",
+              "name": "radiusRow",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "hQA8M",
+                  "name": "rad1",
+                  "width": 80,
+                  "height": 50,
+                  "fill": "#E0E0E0",
+                  "cornerRadius": 4,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yRJ0Z",
+                      "name": "rad1Text",
+                      "fill": "#616161",
+                      "content": "sm: 4px",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "0Ikwa",
+                  "name": "rad2",
+                  "width": 80,
+                  "height": 50,
+                  "fill": "#E0E0E0",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wgrzh",
+                      "name": "rad2Text",
+                      "fill": "#616161",
+                      "content": "base: 8px",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "EGRwL",
+                  "name": "rad3",
+                  "width": 80,
+                  "height": 50,
+                  "fill": "#E0E0E0",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qglQ3",
+                      "name": "rad3Text",
+                      "fill": "#616161",
+                      "content": "md: 12px",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zYR2r",
+                  "name": "rad4",
+                  "width": 80,
+                  "height": 50,
+                  "fill": "#E0E0E0",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DTYcl",
+                      "name": "rad4Text",
+                      "fill": "#616161",
+                      "content": "lg: 16px",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "1PKKr",
+                  "name": "rad5",
+                  "width": 80,
+                  "height": 50,
+                  "fill": "#E0E0E0",
+                  "cornerRadius": 24,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BJYzy",
+                      "name": "rad5Text",
+                      "fill": "#616161",
+                      "content": "xl: 24px",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "uRsI7",
+                  "name": "radiusFull",
+                  "width": 80,
+                  "height": 50,
+                  "fill": "#E0E0E0",
+                  "cornerRadius": 9999,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "At2Lm",
+                      "name": "radiusFullL",
+                      "fill": "#616161",
+                      "content": "full",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "FQsLx",
+          "name": "shadowSection",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "X9fFV",
+              "name": "shadowTitle",
+              "fill": "#722F37",
+              "content": "그림자 (Shadow)",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "9rFeJ",
+              "name": "shadowRow",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "yqe24",
+                  "name": "shadow1",
+                  "width": 100,
+                  "height": 60,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 8,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#0000001A",
+                    "offset": {
+                      "x": 0,
+                      "y": 1
+                    },
+                    "blur": 2
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dlCWC",
+                      "name": "shadow1Text",
+                      "fill": "#616161",
+                      "content": "sm",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QGLyS",
+                  "name": "shadow2",
+                  "width": 100,
+                  "height": 60,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 8,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#0000000F",
+                    "offset": {
+                      "x": 0,
+                      "y": 2
+                    },
+                    "blur": 4
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "NJF3c",
+                      "name": "shadow2Text",
+                      "fill": "#616161",
+                      "content": "base",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qJpn1",
+                  "name": "shadow3",
+                  "width": 100,
+                  "height": 60,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 8,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000012",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 6
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BvsrG",
+                      "name": "shadow3Text",
+                      "fill": "#616161",
+                      "content": "md",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "iVWtx",
+                  "name": "shadow4",
+                  "width": 100,
+                  "height": 60,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 8,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000014",
+                    "offset": {
+                      "x": 0,
+                      "y": 10
+                    },
+                    "blur": 15
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "2TEbN",
+                      "name": "shadow4Text",
+                      "fill": "#616161",
+                      "content": "lg",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "pgpBo",
+          "name": "breakpointSection",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "CHLOD",
+              "name": "breakpointTitle",
+              "fill": "#722F37",
+              "content": "브레이크포인트",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "FYUrX",
+              "name": "bpRow",
+              "width": "fill_container",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "4oMLX",
+                  "name": "bp1",
+                  "fill": "#212121",
+                  "content": "sm: 640px",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "YPlGD",
+                  "name": "bp2",
+                  "fill": "#212121",
+                  "content": "md: 768px",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Ijybq",
+                  "name": "bp3",
+                  "fill": "#212121",
+                  "content": "lg: 1024px",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "5GxYn",
+                  "name": "bp4",
+                  "fill": "#212121",
+                  "content": "xl: 1280px",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "9b8kX",
+                  "name": "bp5",
+                  "fill": "#212121",
+                  "content": "2xl: 1536px",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "BjEE5",
+      "x": 850,
+      "y": 0,
+      "name": "랜딩 페이지",
+      "width": 375,
+      "fill": "#FAF8F5",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "NkrvJ",
+          "name": "header",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#E5E0D9"
+          },
+          "padding": [
+            16,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "90iDf",
+              "name": "logo",
+              "fill": "#722F37",
+              "content": "KARI Paint",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "gxjf7",
+              "name": "nav",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "msCOd",
+                  "name": "nav1",
+                  "fill": "#722F37",
+                  "content": "랜딩",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "oEblh",
+                  "name": "nav2",
+                  "fill": "#6B6359",
+                  "content": "견적 문의",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "KnFGq",
+                  "name": "nav3",
+                  "fill": "#6B6359",
+                  "content": "작업결과물",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Hw4Ar",
+              "name": "ctaBtn",
+              "width": 96,
+              "height": 36,
+              "fill": "#722F37",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                16
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jyPre",
+                  "name": "ctaLabel",
+                  "fill": "#FFFFFF",
+                  "content": "견적 문의",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Qemhg",
+          "name": "hero",
+          "width": "fill_container",
+          "fill": "#722F37",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 40,
+          "children": [
+            {
+              "type": "text",
+              "id": "1LNsU",
+              "name": "heroTitle",
+              "fill": "#FFFFFF",
+              "content": "공간의 가치를 높이는,",
+              "fontFamily": "Inter",
+              "fontSize": 22,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "ys5Up",
+              "name": "heroSub",
+              "fill": "#FFFFFF",
+              "content": "내 손으로 완성하는",
+              "fontFamily": "Inter",
+              "fontSize": 22,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "pI0Jc",
+              "name": "heroDesc",
+              "fill": "#C9A8A8",
+              "content": "2대째 이어진 도장 시공",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "CL1w6",
+              "name": "heroCta",
+              "height": 44,
+              "fill": "#B8860B",
+              "cornerRadius": 8,
+              "padding": [
+                12,
+                24
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "rDN64",
+                  "name": "heroCtaLabel",
+                  "fill": "#FFFFFF",
+                  "content": "견적 문의하기",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "QPzlJ",
+          "name": "trustSection",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "lM9SK",
+              "name": "trustTitle",
+              "fill": "#1A1A1A",
+              "content": "카리페인트의 3가지 강점",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "QxISF",
+              "name": "trustRow",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "WUPXq",
+                  "name": "trust1",
+                  "fill": "#6B6359",
+                  "content": "✓ 2대 계승 – 30년 가업 이어온 시공 DNA",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "7LlyY",
+                  "name": "trust2",
+                  "fill": "#6B6359",
+                  "content": "✓ 기술 기반 – 300건+ 시공 경험의 숙련",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "nL6pF",
+                  "name": "trust3",
+                  "fill": "#6B6359",
+                  "content": "✓ 고객 만족 – 공간에 감동하는 고객 중심",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "0eAqa",
+          "name": "portfolioSection",
+          "width": "fill_container",
+          "fill": "#F5F3EE",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "3eVwr",
+              "name": "portfolioHeader",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "k0Cnd",
+                  "name": "portfolioTitle",
+                  "fill": "#1A1A1A",
+                  "content": "작업 결과물",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "LKkSg",
+                  "name": "portfolioMore",
+                  "fill": "#722F37",
+                  "content": "전체보기 →",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "luFiq",
+              "name": "portfolioGrid",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "IRNj2",
+                  "name": "card1",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "3dottawa",
+                    "link": "https://unsplash.com/@3dottawa",
+                    "author": "Point3D Commercial Imaging Ltd."
+                  },
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1668911491509-6618ac24e92f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NDk0NjR8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bfvQL",
+                      "name": "card1Placeholder",
+                      "fill": "#FFFFFF",
+                      "content": "강남구 아파트 거실·방 | 3일",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "850Ws",
+                  "name": "card2",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "jovanvasiljevic",
+                    "link": "https://unsplash.com/@jovanvasiljevic",
+                    "author": "Jovan Vasiljević"
+                  },
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1686003571789-d60e9d0de1ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NDk0NjR8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dMuMF",
+                      "name": "card2Placeholder",
+                      "fill": "#FFFFFF",
+                      "content": "파주시 단독주택 외벽 | 4일",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "BracW",
+                  "name": "card3",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "bernardhermant",
+                    "link": "https://unsplash.com/@bernardhermant",
+                    "author": "Bernard Hermant"
+                  },
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1521680329382-fce883873b3d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NDk0NjR8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Z9xVG",
+                      "name": "card3Placeholder",
+                      "fill": "#FFFFFF",
+                      "content": "광진구 상가 매장 | 2일",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qsq2g",
+          "name": "introSection",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "lnEJy",
+              "name": "introText",
+              "fill": "#1A1A1A",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "2대째 이어진 도장 공사업, 공간의 가치를 높이는 기술과 성취감을 중심으로 운영됩니다.",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "gjeV7",
+              "name": "introPoints",
+              "layout": "vertical",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "MvgJK",
+                  "name": "introP1",
+                  "fill": "#6B6359",
+                  "content": "① 성취감 – 내 손으로 공간을 변화시키는 일",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "N0y60",
+                  "name": "introP2",
+                  "fill": "#6B6359",
+                  "content": "② 감동 – 고객 만족에서 오는 희열",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "RzJ6Z",
+                  "name": "introP3",
+                  "fill": "#6B6359",
+                  "content": "③ 성장 – 새로운 기술 학습·숙련",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xaAQO",
+          "name": "reviewSection",
+          "width": "fill_container",
+          "fill": "#F5F3EE",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "kpY07",
+              "name": "reviewTitle",
+              "fill": "#1A1A1A",
+              "content": "고객 후기",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "FAodd",
+              "name": "reviewCard",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "4Ymnw",
+                  "name": "reviewQuote",
+                  "fill": "#4A4540",
+                  "content": "시공 전후 차이가 너무 커서 만족스러워요. 세심하게 작업해 주셨습니다.",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "gkiLR",
+                  "name": "reviewAuthor",
+                  "fill": "#6B6359",
+                  "content": "— 아파트 거주 OO고객",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "NTSe4",
+          "name": "inquiryBanner",
+          "width": "fill_container",
+          "fill": "#722F37",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "SuJTZ",
+              "name": "inquiryBannerTitle",
+              "fill": "#FFFFFF",
+              "content": "편한 방법으로 언제든 문의하세요",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "WkcU2",
+              "name": "inquiryBtns",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "WGDBU",
+                  "name": "kakaoBtn",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "#FEE500",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TzlhR",
+                      "name": "kakaoLabel",
+                      "fill": "#000000",
+                      "content": "🟡 카카오톡 1:1 문의",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "91pdm",
+                  "name": "instaBtn",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "#8B3D47",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bldbN",
+                      "name": "instaLabel",
+                      "fill": "#FFFFFF",
+                      "content": "📸 인스타그램 DM",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vXPoe",
+                  "name": "talkBtn",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "#5A242B",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "LfG6E",
+                      "name": "talkLabel",
+                      "fill": "#FFFFFF",
+                      "content": "💚 네이버 톡톡",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "vC4SU",
+          "name": "footer",
+          "width": "fill_container",
+          "fill": "#1A1A1A",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "mybnl",
+              "name": "footerLogo",
+              "fill": "#FFFFFF",
+              "content": "KARI Paint",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "lzFQ4",
+              "name": "footerLinks",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "3SqqN",
+                  "name": "footerLink1",
+                  "fill": "#A39E95",
+                  "content": "견적 문의",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "TtNoc",
+                  "name": "footerLink2",
+                  "fill": "#A39E95",
+                  "content": "작업 결과물",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "wapWa",
+              "name": "footerInfo",
+              "fill": "#6B6359",
+              "content": "건설업 도장 공사 | 대표 박용규",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "FB92L",
+      "x": 850,
+      "y": 1850,
+      "name": "견적 문의",
+      "width": 375,
+      "fill": "#FAF8F5",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "avdcX",
+          "name": "inqHeader",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#E5E0D9"
+          },
+          "padding": [
+            16,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "uwuox",
+              "name": "inqLogo",
+              "fill": "#722F37",
+              "content": "KARI Paint",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "F4ul6",
+              "name": "inqNav",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vOG47",
+                  "name": "inqNav1",
+                  "fill": "#6B6359",
+                  "content": "랜딩",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "bOqBS",
+                  "name": "inqNav2",
+                  "fill": "#722F37",
+                  "content": "견적 문의",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "al8A6",
+                  "name": "inqNav3",
+                  "fill": "#6B6359",
+                  "content": "작업결과물",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "zcPBt",
+              "name": "inqCtaBtn",
+              "width": 96,
+              "height": 36,
+              "fill": "#722F37",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "FjLqe",
+                  "name": "inqCtaLabel",
+                  "fill": "#FFFFFF",
+                  "content": "견적 문의",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Y8YhT",
+          "name": "inqHero",
+          "width": "fill_container",
+          "fill": "#722F37",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 32,
+          "children": [
+            {
+              "type": "text",
+              "id": "QA2UF",
+              "name": "inqHeroTitle",
+              "fill": "#FFFFFF",
+              "content": "견적 문의",
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "a5lNk",
+              "name": "inqHeroSub",
+              "fill": "#C9A8A8",
+              "content": "편한 방법으로 언제든 연락 주세요",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "SWfQY",
+          "name": "kakaoSection",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "P1UK1",
+              "name": "kakaoSectionTitle",
+              "fill": "#1A1A1A",
+              "content": "1:1 카카오톡으로 바로 문의",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "UnPck",
+              "name": "kakaoSectionDesc",
+              "fill": "#6B6359",
+              "content": "실시간으로 빠르게 상담드립니다",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "YS6hR",
+              "name": "kakaoMainBtn",
+              "width": "fill_container",
+              "height": 56,
+              "fill": "#FEE500",
+              "cornerRadius": 12,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "bBqJM",
+                  "name": "kakaoMainLabel",
+                  "fill": "#000000",
+                  "content": "🟡 카카오톡 1:1 문의하기",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "KLAZV",
+          "name": "howToSection",
+          "width": "fill_container",
+          "fill": "#F5F3EE",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "vBXaS",
+              "name": "howToTitle",
+              "fill": "#1A1A1A",
+              "content": "견적 문의하는 법",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "wJez4",
+              "name": "step1",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "9annu",
+                  "name": "step1Num",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#722F37",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MMUzj",
+                      "fill": "#FFFFFF",
+                      "content": "1",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "rFcpt",
+                  "name": "step1Title",
+                  "fill": "#1A1A1A",
+                  "content": "연락하기",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "ffVby",
+                  "name": "step1Body",
+                  "fill": "#4A4540",
+                  "content": "카카오톡, 인스타그램 DM, 네이버 톡톡 중 편하신 방법으로 연락해 주세요. 문의 시 주소, 희망 시공 범위(예: 거실·방 전체, 외벽 일부)를 알려주시면 더 빠르게 안내드립니다.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "7f1nW",
+              "name": "step2",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "glTvn",
+                  "name": "step2Num",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#722F37",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "OnQjz",
+                      "fill": "#FFFFFF",
+                      "content": "2",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "SVWLF",
+                  "name": "step2Title",
+                  "fill": "#1A1A1A",
+                  "content": "현장·사진 확인",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "vmQCO",
+                  "name": "step2Body",
+                  "fill": "#4A4540",
+                  "content": "현장 방문 또는 사진 전송으로 시공 범위를 확인합니다. 천장·벽 상태, 면적, 특수 요청사항이 있으면 함께 알려주세요. 정확한 확인 후 견적이 가능합니다.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "MrfTy",
+              "name": "step3",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "PxlIh",
+                  "name": "step3Num",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#722F37",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SV6Rw",
+                      "fill": "#FFFFFF",
+                      "content": "3",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "sFD0y",
+                  "name": "step3Title",
+                  "fill": "#1A1A1A",
+                  "content": "견적·일정 협의",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "SHPJA",
+                  "name": "step3Body",
+                  "fill": "#4A4540",
+                  "content": "견적서를 제출한 뒤 작업 일정을 협의합니다. 일정이 맞지 않을 경우 조정도 가능합니다. 계약 후 시공 순서와 준비물 안내를 드립니다.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "d4GQ4",
+          "name": "otherChannels",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "5fN4n",
+              "name": "otherTitle",
+              "fill": "#1A1A1A",
+              "content": "다른 문의 채널",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "fbj41",
+              "name": "otherRow",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "QmgeC",
+                  "name": "instaSmall",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#8B3D47",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZvHDA",
+                      "name": "instaSmallL",
+                      "fill": "#FFFFFF",
+                      "content": "인스타 DM",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zieQs",
+                  "name": "talkSmall",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#5A242B",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "5ONYV",
+                      "name": "talkSmallL",
+                      "fill": "#FFFFFF",
+                      "content": "네이버 톡톡",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "aPR0i",
+          "name": "faqSection",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "P7LTO",
+              "name": "faqTitle",
+              "fill": "#1A1A1A",
+              "content": "자주 묻는 질문",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "F3FIL",
+              "name": "faqItem1",
+              "width": "fill_container",
+              "fill": "#F5F3EE",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "h0o8m",
+                  "name": "faq1Q",
+                  "fill": "#1A1A1A",
+                  "content": "견적은 어떻게 받을 수 있나요?",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "7JNmd",
+                  "name": "faq1A",
+                  "fill": "#4A4540",
+                  "content": "카카오톡, 인스타 DM, 톡톡 중 편한 채널로 문의해 주세요. 주소와 희망 시공 범위를 알려주시면 빠르게 안내드립니다.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "glbg8",
+              "name": "faqItem2",
+              "width": "fill_container",
+              "fill": "#F5F3EE",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "9Ip6O",
+                  "name": "faq2Q",
+                  "fill": "#1A1A1A",
+                  "content": "견적은 어떻게 책정되나요?",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "D2vLQ",
+                  "name": "faq2A",
+                  "fill": "#4A4540",
+                  "content": "면적, 도장 종류, 작업 난이도 등을 고려합니다. 정확한 견적을 위해 현장 방문이 필요할 수 있습니다.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Cz1cj",
+              "name": "faqItem3",
+              "width": "fill_container",
+              "fill": "#F5F3EE",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ZLVC5",
+                  "name": "faq3Q",
+                  "fill": "#1A1A1A",
+                  "content": "현장 방문이 필수인가요?",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "em6nH",
+                  "name": "faq3A",
+                  "fill": "#4A4540",
+                  "content": "사진 전송으로도 안내 가능합니다. 다만 정확한 견적을 위해 현장 확인을 권장드립니다.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DXWRq",
+          "name": "inqFooter",
+          "width": "fill_container",
+          "fill": "#1A1A1A",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "GIsau",
+              "name": "inqFooterLogo",
+              "fill": "#FFFFFF",
+              "content": "KARI Paint",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "A0wFE",
+              "name": "inqFooterInfo",
+              "fill": "#6B6359",
+              "content": "건설업 도장 공사 | 대표 박용규",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "KsH3L",
+      "x": 850,
+      "y": 3240,
+      "name": "작업 결과물",
+      "width": 375,
+      "fill": "#FAF8F5",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "yhfUC",
+          "name": "portHeader",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#E5E0D9"
+          },
+          "padding": [
+            16,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "KBxfK",
+              "name": "portLogo",
+              "fill": "#722F37",
+              "content": "KARI Paint",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "PexRD",
+              "name": "portNav",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "8Nrc2",
+                  "name": "portNav1",
+                  "fill": "#6B6359",
+                  "content": "랜딩",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "pW3UD",
+                  "name": "portNav2",
+                  "fill": "#6B6359",
+                  "content": "견적 문의",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "4NjUc",
+                  "name": "portNav3",
+                  "fill": "#722F37",
+                  "content": "작업결과물",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "iSSba",
+              "name": "portCtaBtn",
+              "width": 96,
+              "height": 36,
+              "fill": "#722F37",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "0FhdG",
+                  "name": "portCtaLabel",
+                  "fill": "#FFFFFF",
+                  "content": "견적 문의",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "CCVaO",
+          "name": "portHero",
+          "width": "fill_container",
+          "fill": "#722F37",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 32,
+          "children": [
+            {
+              "type": "text",
+              "id": "CWpQ3",
+              "name": "portHeroTitle",
+              "fill": "#FFFFFF",
+              "content": "작업 결과물",
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "MJqCn",
+              "name": "portHeroSub",
+              "fill": "#C9A8A8",
+              "content": "공간을 변화시킨 시공 사례",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "6rsFS",
+          "name": "portFilter",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "Vny8E",
+              "name": "filterAll",
+              "height": 36,
+              "fill": "#722F37",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                16
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AkYSV",
+                  "name": "filterAllL",
+                  "fill": "#FFFFFF",
+                  "content": "전체",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "HH6QE",
+              "name": "filter1",
+              "height": 36,
+              "fill": "#F0EDE8",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                16
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "M6ncQ",
+                  "name": "filter1L",
+                  "fill": "#6B6359",
+                  "content": "인테리어",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "KGA8h",
+              "name": "filter2",
+              "height": 36,
+              "fill": "#F0EDE8",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                16
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "NGMg4",
+                  "name": "filter2L",
+                  "fill": "#6B6359",
+                  "content": "외벽",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "HYATC",
+          "name": "portGallery",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "2B1CN",
+              "name": "portCard1",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "VSMTq",
+                  "name": "portCard1Img",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "enginakyurt",
+                    "link": "https://unsplash.com/@enginakyurt",
+                    "author": "engin akyurt"
+                  },
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1683643320480-97a93eebbe05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NDk0NTl8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": [
+                    8,
+                    8,
+                    0,
+                    0
+                  ],
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pH5wT",
+                      "name": "portCard1ImgT",
+                      "fill": "#6B6359",
+                      "content": "시공 사진",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "iXzpr",
+                  "name": "portCard1Body",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "KrmUk",
+                      "name": "portCard1Title",
+                      "fill": "#1A1A1A",
+                      "content": "인테리어 도장 시공",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vu7R1",
+                      "name": "portCard1Desc",
+                      "fill": "#6B6359",
+                      "content": "강남구 아파트 거실·방 | 3일",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ykbIf",
+              "name": "portCard2",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "K9kBb",
+                  "name": "portCard2Img",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "nicechoiceinterior01",
+                    "link": "https://unsplash.com/@nicechoiceinterior01",
+                    "author": "Nice Interior"
+                  },
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1770381142493-075344e6fc9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NDk0NjN8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": [
+                    8,
+                    8,
+                    0,
+                    0
+                  ],
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Fp9nE",
+                      "name": "portCard2ImgT",
+                      "fill": "#6B6359",
+                      "content": "시공 사진",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hrSwt",
+                  "name": "portCard2Body",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "l61jq",
+                      "name": "portCard2Title",
+                      "fill": "#1A1A1A",
+                      "content": "외벽 도장 시공",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "W3nBT",
+                      "name": "portCard2Desc",
+                      "fill": "#6B6359",
+                      "content": "파주시 단독주택 외벽 | 4일",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "X676I",
+              "name": "portCard3",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "07oH3",
+                  "name": "portCard3Img",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "christellehayek",
+                    "link": "https://unsplash.com/@christellehayek",
+                    "author": "Christelle Hayek"
+                  },
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1767701313129-e507a5e86a9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NDk0NjN8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": [
+                    8,
+                    8,
+                    0,
+                    0
+                  ],
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "f93vZ",
+                      "name": "portCard3ImgT",
+                      "fill": "#6B6359",
+                      "content": "시공 사진",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "OFdb9",
+                  "name": "portCard3Body",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zPsqu",
+                      "name": "portCard3Title",
+                      "fill": "#1A1A1A",
+                      "content": "상업시설 도장",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Xpu6n",
+                      "name": "portCard3Desc",
+                      "fill": "#6B6359",
+                      "content": "광진구 상가 매장 | 2일",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DK0U3",
+          "name": "portInquiry",
+          "width": "fill_container",
+          "fill": "#722F37",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "9ntQ9",
+              "name": "portInquiryT",
+              "fill": "#FFFFFF",
+              "content": "견적이 궁금하신가요?",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "xjQK9",
+              "name": "portInquiryBtn",
+              "width": "fill_container",
+              "height": 48,
+              "fill": "#FEE500",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "cSS7X",
+                  "name": "portInquiryBtnL",
+                  "fill": "#000000",
+                  "content": "카카오톡으로 문의하기",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Gdi5i",
+          "name": "portFooter",
+          "width": "fill_container",
+          "fill": "#1A1A1A",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "f42Ks",
+              "name": "portFooterLogo",
+              "fill": "#FFFFFF",
+              "content": "KARI Paint",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "L7lg7",
+              "name": "portFooterInfo",
+              "fill": "#6B6359",
+              "content": "건설업 도장 공사 | 대표 박용규",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Il4C2",
+      "x": 1255,
+      "y": 0,
+      "name": "랜딩 (PC)",
+      "width": 1024,
+      "fill": "#FAF8F5",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "H8CBQ",
+          "name": "dHeader",
+          "width": "fill_container",
+          "height": 64,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#E5E0D9"
+          },
+          "padding": [
+            0,
+            40
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "3tT7m",
+              "name": "dLogo",
+              "fill": "#722F37",
+              "content": "KARI Paint",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "7UkPv",
+              "name": "dNav",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "9UTCN",
+                  "name": "dNav1",
+                  "fill": "#722F37",
+                  "content": "랜딩",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "wiQGR",
+                  "name": "dNav2",
+                  "fill": "#6B6359",
+                  "content": "견적 문의",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Sgkxf",
+                  "name": "dNav3",
+                  "fill": "#6B6359",
+                  "content": "작업결과물",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tIcXg",
+              "name": "dCta",
+              "width": 120,
+              "height": 40,
+              "fill": "#722F37",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "9JZLs",
+                  "name": "dCtaL",
+                  "fill": "#FFFFFF",
+                  "content": "견적 문의",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "iGiD3",
+          "name": "dHero",
+          "width": "fill_container",
+          "height": 320,
+          "fill": "#722F37",
+          "gap": 48,
+          "padding": 60,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "2m6ie",
+              "name": "dHeroLeft",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "9I7WU",
+                  "name": "dHeroT",
+                  "fill": "#FFFFFF",
+                  "content": "공간의 가치를 높이는, 내 손으로 완성하는",
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "zZLcY",
+                  "name": "dHeroS",
+                  "fill": "#C9A8A8",
+                  "content": "2대째 이어진 도장 시공",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "Tm17b",
+                  "name": "dHeroBtn",
+                  "height": 48,
+                  "fill": "#B8860B",
+                  "cornerRadius": 8,
+                  "padding": [
+                    14,
+                    32
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ERPFw",
+                      "name": "dHeroBtnL",
+                      "fill": "#FFFFFF",
+                      "content": "견적 문의하기",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "0PNHu",
+              "name": "dHeroImg",
+              "metadata": {
+                "type": "unsplash",
+                "username": "tugceack",
+                "link": "https://unsplash.com/@tugceack",
+                "author": "Tuğçe Açıkyürek"
+              },
+              "width": 280,
+              "height": 200,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1674500197236-a9baa14a697e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NDk0NjB8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": 8
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lS1n4",
+          "name": "dTrust",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "gap": 48,
+          "padding": 40,
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "0A4bc",
+              "name": "dTrust1",
+              "fill": "#6B6359",
+              "content": "✓ 2대 계승",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "RCHtT",
+              "name": "dTrust2",
+              "fill": "#6B6359",
+              "content": "✓ 기술 기반",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "dCjwI",
+              "name": "dTrust3",
+              "fill": "#6B6359",
+              "content": "✓ 고객 만족",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "zDwUS",
+          "name": "dPortSection",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "UJZCV",
+              "name": "dPortTitle",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "zScMf",
+                  "name": "dPortTitleT",
+                  "fill": "#1A1A1A",
+                  "content": "작업 결과물",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "fvqPj",
+                  "name": "dPortMore",
+                  "fill": "#722F37",
+                  "content": "전체보기 →",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tqMjx",
+              "name": "dPortGrid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "NMSby",
+                  "name": "dCard1",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "ninjason",
+                    "link": "https://unsplash.com/@ninjason",
+                    "author": "Jason Leung"
+                  },
+                  "width": "fill_container",
+                  "height": 180,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1763356844645-dbfd9244fa20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NDk0NzN8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 8,
+                  "layout": "vertical"
+                },
+                {
+                  "type": "frame",
+                  "id": "rLGqk",
+                  "name": "dCard2",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "3dottawa",
+                    "link": "https://unsplash.com/@3dottawa",
+                    "author": "Point3D Commercial Imaging Ltd."
+                  },
+                  "width": "fill_container",
+                  "height": 180,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1630699294288-3bc2ae7bf361?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NDk0NzN8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 8,
+                  "layout": "vertical"
+                },
+                {
+                  "type": "frame",
+                  "id": "MDdpG",
+                  "name": "dCard3",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "declansun",
+                    "link": "https://unsplash.com/@declansun",
+                    "author": "Declan Sun"
+                  },
+                  "width": "fill_container",
+                  "height": 180,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1714366451508-ac5e5090c4f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NDk0NzR8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 8,
+                  "layout": "vertical"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ErNWF",
+          "name": "dReviewSection",
+          "width": "fill_container",
+          "fill": "#F5F3EE",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 40,
+          "children": [
+            {
+              "type": "text",
+              "id": "Rdyub",
+              "name": "dReviewTitle",
+              "fill": "#1A1A1A",
+              "content": "고객 후기",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "yfl8W",
+              "name": "dReviewQuote",
+              "fill": "#4A4540",
+              "content": "시공 전후 차이가 너무 커서 만족스러워요. 세심하게 작업해 주셨습니다. — 아파트 거주 OO고객",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ttSrv",
+          "name": "dInquiry",
+          "width": "fill_container",
+          "fill": "#722F37",
+          "gap": 24,
+          "padding": 40,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "s2XJ9",
+              "name": "dInquiryT",
+              "fill": "#FFFFFF",
+              "content": "편한 방법으로 문의하세요",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "xsNhy",
+              "name": "dKakao",
+              "width": 180,
+              "height": 48,
+              "fill": "#FEE500",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "fLtDc",
+                  "name": "dKakaoL",
+                  "fill": "#000000",
+                  "content": "카카오톡",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "VXvwW",
+              "name": "dInsta",
+              "width": 180,
+              "height": 48,
+              "fill": "#E4405F",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "TKUsI",
+                  "name": "dInstaL",
+                  "fill": "#FFFFFF",
+                  "content": "인스타 DM",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "q98HE",
+              "name": "dTalk",
+              "width": 180,
+              "height": 48,
+              "fill": "#03C75A",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "4hLZj",
+                  "name": "dTalkL",
+                  "fill": "#FFFFFF",
+                  "content": "네이버 톡톡",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "vQM7Y",
+          "name": "dFooter",
+          "width": "fill_container",
+          "fill": "#1A1A1A",
+          "gap": 32,
+          "padding": 24,
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "SKIo0",
+              "name": "dFooterL",
+              "fill": "#FFFFFF",
+              "content": "KARI Paint",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "fVnix",
+              "name": "dFooterR",
+              "fill": "#6B6359",
+              "content": "견적 문의 | 작업 결과물 | 건설업 도장 공사",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "KFVhk",
+      "x": 1255,
+      "y": 1850,
+      "name": "견적 문의 (PC)",
+      "width": 1024,
+      "fill": "#FAF8F5",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "s2Jom",
+          "name": "dInqHeader",
+          "width": "fill_container",
+          "height": 64,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#E5E0D9"
+          },
+          "padding": [
+            0,
+            40
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "warrN",
+              "name": "dInqLogo",
+              "fill": "#722F37",
+              "content": "KARI Paint",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "TeysO",
+              "name": "dInqNav",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "WzP09",
+                  "name": "dInqNav1",
+                  "fill": "#6B6359",
+                  "content": "랜딩",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "qHajQ",
+                  "name": "dInqNav2",
+                  "fill": "#722F37",
+                  "content": "견적 문의",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "prMna",
+                  "name": "dInqNav3",
+                  "fill": "#6B6359",
+                  "content": "작업결과물",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "pr88l",
+              "name": "dInqCta",
+              "width": 120,
+              "height": 40,
+              "fill": "#722F37",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "aYr1g",
+                  "name": "dInqCtaL",
+                  "fill": "#FFFFFF",
+                  "content": "견적 문의",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "vj3jm",
+          "name": "dInqHero",
+          "width": "fill_container",
+          "fill": "#722F37",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 48,
+          "children": [
+            {
+              "type": "text",
+              "id": "LyGcB",
+              "name": "dInqHeroT",
+              "fill": "#FFFFFF",
+              "content": "견적 문의",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "yIZVP",
+              "name": "dInqHeroS",
+              "fill": "#C9A8A8",
+              "content": "편한 방법으로 언제든 연락 주세요",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "gJJP7",
+          "name": "dInqMain",
+          "width": "fill_container",
+          "gap": 48,
+          "padding": 48,
+          "children": [
+            {
+              "type": "frame",
+              "id": "QMR5S",
+              "name": "dInqLeft",
+              "width": 320,
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Dh96K",
+                  "name": "dInqKakaoT",
+                  "fill": "#1A1A1A",
+                  "content": "1:1 카카오톡으로 바로 문의",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "zTA8n",
+                  "name": "dInqKakaoBtn",
+                  "width": 280,
+                  "height": 56,
+                  "fill": "#FEE500",
+                  "cornerRadius": 12,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rateH",
+                      "name": "dInqKakaoL",
+                      "fill": "#000000",
+                      "content": "카카오톡 1:1 문의하기",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "yQG0g",
+              "name": "dInqRight",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "4GOIY",
+                  "name": "dInqHowT",
+                  "fill": "#1A1A1A",
+                  "content": "견적 문의하는 법",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "bCvDX",
+                  "name": "dInqStep1Wrap",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zDIyU",
+                      "fill": "#4A4540",
+                      "content": "① 연락하기 — 카카오톡, 인스타 DM, 톡톡 중 편한 채널로 연락해 주세요.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "gT2fy",
+                      "fill": "#4A4540",
+                      "content": "문의 시 주소, 희망 시공 범위(예: 거실·방 전체, 외벽 일부)를 알려주시면 더 빠르게 안내드립니다.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Un3ob",
+                  "name": "dInqOther",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "aKu79",
+                      "name": "dInqInsta",
+                      "width": 140,
+                      "height": 44,
+                      "fill": "#8B3D47",
+                      "cornerRadius": 8,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "jOiIN",
+                          "name": "dInqInstaL",
+                          "fill": "#FFFFFF",
+                          "content": "인스타 DM",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CYrgG",
+                      "name": "dInqTalk",
+                      "width": 140,
+                      "height": 44,
+                      "fill": "#5A242B",
+                      "cornerRadius": 8,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "f5cLE",
+                          "name": "dInqTalkL",
+                          "fill": "#FFFFFF",
+                          "content": "네이버 톡톡",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "7nGqw",
+                  "name": "dInqStep2Wrap",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "3rZq8",
+                      "fill": "#4A4540",
+                      "content": "② 현장·사진 확인 — 현장 방문 또는 사진 전송으로 시공 범위를 확인합니다.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Dqls3",
+                      "fill": "#4A4540",
+                      "content": "천장·벽 상태, 면적, 특수 요청사항이 있으면 함께 알려주세요. 정확한 확인 후 견적이 가능합니다.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Jx4Uv",
+                  "name": "dInqStep3Wrap",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "6Q8fK",
+                      "fill": "#4A4540",
+                      "content": "③ 견적·일정 협의 — 견적서를 제출한 뒤 작업 일정을 협의합니다.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "GCvTH",
+                      "fill": "#4A4540",
+                      "content": "일정이 맞지 않을 경우 조정도 가능합니다. 계약 후 시공 순서와 준비물 안내를 드립니다.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "1roOr",
+          "name": "dFaqSection",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": 40,
+          "children": [
+            {
+              "type": "text",
+              "id": "LTbqf",
+              "name": "dFaqTitle",
+              "fill": "#1A1A1A",
+              "content": "자주 묻는 질문",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "2pXq1",
+              "name": "dFaq1",
+              "fill": "#4A4540",
+              "content": "견적은 어떻게 받을 수 있나요? — 카카오톡, 인스타 DM, 톡톡 중 편한 채널로 문의해 주세요.",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "ZeC7o",
+              "name": "dFaq2",
+              "fill": "#4A4540",
+              "content": "견적은 어떻게 책정되나요? — 면적, 도장 종류, 작업 난이도 등을 고려합니다.",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "byCUD",
+              "name": "dFaq3",
+              "fill": "#4A4540",
+              "content": "현장 방문이 필수인가요? — 사진 전송으로도 안내 가능합니다. 정확한 견적을 위해 현장 확인을 권장합니다.",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Sco6J",
+          "name": "dInqFooter",
+          "width": "fill_container",
+          "fill": "#1A1A1A",
+          "padding": 24,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "CQ8tU",
+              "name": "dInqFooterT",
+              "fill": "#6B6359",
+              "content": "KARI Paint | 건설업 도장 공사",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "sMDXP",
+      "x": 1255,
+      "y": 3240,
+      "name": "작업 결과물 (PC)",
+      "width": 1024,
+      "fill": "#FAF8F5",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "ce9aR",
+          "name": "dPortHeader",
+          "width": "fill_container",
+          "height": 64,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#E5E0D9"
+          },
+          "padding": [
+            0,
+            40
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Qfi9S",
+              "name": "dPortLogo",
+              "fill": "#722F37",
+              "content": "KARI Paint",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "Dr60i",
+              "name": "dPortNav",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "d6tWB",
+                  "name": "dPortNav1",
+                  "fill": "#6B6359",
+                  "content": "랜딩",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "e3dyE",
+                  "name": "dPortNav2",
+                  "fill": "#6B6359",
+                  "content": "견적 문의",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Ye3SY",
+                  "name": "dPortNav3",
+                  "fill": "#722F37",
+                  "content": "작업결과물",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "NKJnF",
+              "name": "dPortCta",
+              "width": 120,
+              "height": 40,
+              "fill": "#722F37",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "8z8OV",
+                  "name": "dPortCtaL",
+                  "fill": "#FFFFFF",
+                  "content": "견적 문의",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "JWkMg",
+          "name": "dPortHero",
+          "width": "fill_container",
+          "fill": "#722F37",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 48,
+          "children": [
+            {
+              "type": "text",
+              "id": "EtEq6",
+              "name": "dPortHeroT",
+              "fill": "#FFFFFF",
+              "content": "작업 결과물",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "DuqLo",
+              "name": "dPortHeroS",
+              "fill": "#C9A8A8",
+              "content": "공간을 변화시킨 시공 사례",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "e082Q",
+          "name": "dPortFilter",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "gap": 12,
+          "padding": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "0EA4r",
+              "name": "dPortFAll",
+              "height": 40,
+              "fill": "#722F37",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                20
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "gbOUp",
+                  "name": "dPortFAllL",
+                  "fill": "#FFFFFF",
+                  "content": "전체",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "rGn2N",
+              "name": "dPortF1",
+              "height": 40,
+              "fill": "#F0EDE8",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                20
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lVcxY",
+                  "name": "dPortF1L",
+                  "fill": "#6B6359",
+                  "content": "인테리어",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "eqGg4",
+              "name": "dPortF2",
+              "height": 40,
+              "fill": "#F0EDE8",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                20
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "pKnsz",
+                  "name": "dPortF2L",
+                  "fill": "#6B6359",
+                  "content": "외벽",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GoPQ0",
+          "name": "dPortGallery",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "z6kbq",
+              "name": "dPortRow1",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "5FxTq",
+                  "name": "dPc1",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "xzXKy",
+                      "name": "dPc1Img",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "rflrkn",
+                        "link": "https://unsplash.com/@rflrkn",
+                        "author": "Rafael Arkenau"
+                      },
+                      "width": "fill_container",
+                      "height": 140,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1767402923278-a337a29208f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NDk0NzF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": [
+                        8,
+                        8,
+                        0,
+                        0
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "wlRz3",
+                      "name": "dPc1Body",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "BDEaI",
+                          "name": "dPc1T",
+                          "fill": "#1A1A1A",
+                          "content": "인테리어 도장 시공",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "7EUyj",
+                          "name": "dPc1Desc",
+                          "fill": "#6B6359",
+                          "content": "강남구 아파트 거실·방 | 3일",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "haOJR",
+                  "name": "dPc2",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vVSQo",
+                      "name": "dPc2Img",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "pickawood",
+                        "link": "https://unsplash.com/@pickawood",
+                        "author": "Pickawood"
+                      },
+                      "width": "fill_container",
+                      "height": 140,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1593067607070-95193763e3ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NDk0NzJ8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": [
+                        8,
+                        8,
+                        0,
+                        0
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "MLtlh",
+                      "name": "dPc2Body",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "r2MGI",
+                          "name": "dPc2T",
+                          "fill": "#1A1A1A",
+                          "content": "외벽 도장",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "bqyAZ",
+                          "name": "dPc2Desc",
+                          "fill": "#6B6359",
+                          "content": "파주시 단독주택 외벽 | 4일",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ao3Oh",
+                  "name": "dPc3",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "NWStE",
+                      "name": "dPc3Img",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "mahmoud_azmy",
+                        "link": "https://unsplash.com/@mahmoud_azmy",
+                        "author": "mahmoud azmy"
+                      },
+                      "width": "fill_container",
+                      "height": 140,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1642541070065-3912f347e7c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NDk0NzJ8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": [
+                        8,
+                        8,
+                        0,
+                        0
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "IKqwf",
+                      "name": "dPc3Body",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "78jeC",
+                          "name": "dPc3T",
+                          "fill": "#1A1A1A",
+                          "content": "상업시설 도장",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "i1Ff9",
+                          "name": "dPc3Desc",
+                          "fill": "#6B6359",
+                          "content": "광진구 상가 매장 | 2일",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "76lhf",
+          "name": "dPortInq",
+          "width": "fill_container",
+          "fill": "#722F37",
+          "gap": 24,
+          "padding": 32,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "mQxyT",
+              "name": "dPortInqT",
+              "fill": "#FFFFFF",
+              "content": "견적이 궁금하신가요?",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "8VVzj",
+              "name": "dPortInqBtn",
+              "width": 200,
+              "height": 48,
+              "fill": "#FEE500",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "1yO3K",
+                  "name": "dPortInqBtnL",
+                  "fill": "#000000",
+                  "content": "카카오톡으로 문의하기",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Yfaco",
+          "name": "dPortFooter",
+          "width": "fill_container",
+          "fill": "#1A1A1A",
+          "padding": 24,
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "95ELY",
+              "name": "dPortFooterT",
+              "fill": "#6B6359",
+              "content": "KARI Paint | 건설업 도장 공사",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

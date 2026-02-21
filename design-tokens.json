@@ -1,0 +1,108 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "name": "karipaint",
+  "colors": {
+    "primary": {
+      "main": { "value": "#722F37" },
+      "light": { "value": "#8B3D47" },
+      "dark": { "value": "#5A242B" }
+    },
+    "secondary": {
+      "main": { "value": "#B8860B" },
+      "light": { "value": "#D4AF37" },
+      "dark": { "value": "#8B6914" }
+    },
+    "neutral": {
+      "white": { "value": "#FFFFFF" },
+      "background": { "value": "#FAF8F5" },
+      "backgroundAlt": { "value": "#F5F3EE" },
+      "gray-50": { "value": "#FAFAF8" },
+      "gray-100": { "value": "#F0EDE8" },
+      "gray-200": { "value": "#E5E0D9" },
+      "gray-300": { "value": "#D4CFC6" },
+      "gray-400": { "value": "#A39E95" },
+      "gray-500": { "value": "#6B6359" },
+      "gray-600": { "value": "#554D44" },
+      "gray-700": { "value": "#3D3630" },
+      "gray-800": { "value": "#2A2520" },
+      "gray-900": { "value": "#1A1A1A" },
+      "black": { "value": "#000000" }
+    },
+    "semantic": {
+      "success": { "value": "#2E7D32" },
+      "warning": { "value": "#B8860B" },
+      "error": { "value": "#8B2635" },
+      "info": { "value": "#5A242B" }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "primary": { "value": "'Pretendard', 'Noto Sans KR', -apple-system, sans-serif" },
+      "heading": { "value": "'Pretendard', 'Noto Sans KR', sans-serif" },
+      "mono": { "value": "'JetBrains Mono', 'Fira Code', monospace" }
+    },
+    "fontSize": {
+      "xs": { "value": "0.75rem" },
+      "sm": { "value": "0.875rem" },
+      "base": { "value": "1rem" },
+      "lg": { "value": "1.125rem" },
+      "xl": { "value": "1.25rem" },
+      "2xl": { "value": "1.5rem" },
+      "3xl": { "value": "2rem" },
+      "4xl": { "value": "2.5rem" },
+      "5xl": { "value": "3rem" }
+    },
+    "fontWeight": {
+      "light": { "value": 300 },
+      "regular": { "value": 400 },
+      "medium": { "value": 500 },
+      "semibold": { "value": 600 },
+      "bold": { "value": 700 }
+    },
+    "lineHeight": {
+      "tight": { "value": 1.2 },
+      "normal": { "value": 1.5 },
+      "relaxed": { "value": 1.75 },
+      "loose": { "value": 2 }
+    }
+  },
+  "spacing": {
+    "unit": { "value": "4px" },
+    "0": { "value": "0" },
+    "1": { "value": "4px" },
+    "2": { "value": "8px" },
+    "3": { "value": "12px" },
+    "4": { "value": "16px" },
+    "5": { "value": "20px" },
+    "6": { "value": "24px" },
+    "8": { "value": "32px" },
+    "10": { "value": "40px" },
+    "12": { "value": "48px" },
+    "16": { "value": "64px" },
+    "20": { "value": "80px" },
+    "24": { "value": "96px" }
+  },
+  "shadow": {
+    "sm": { "value": "0 1px 2px rgba(0,0,0,0.05)" },
+    "base": { "value": "0 2px 4px rgba(0,0,0,0.06)" },
+    "md": { "value": "0 4px 6px rgba(0,0,0,0.07)" },
+    "lg": { "value": "0 10px 15px rgba(0,0,0,0.08)" },
+    "xl": { "value": "0 20px 25px rgba(0,0,0,0.1)" }
+  },
+  "radius": {
+    "none": { "value": "0" },
+    "sm": { "value": "4px" },
+    "base": { "value": "8px" },
+    "md": { "value": "12px" },
+    "lg": { "value": "16px" },
+    "xl": { "value": "24px" },
+    "full": { "value": "9999px" }
+  },
+  "breakpoints": {
+    "sm": { "value": "640px" },
+    "md": { "value": "768px" },
+    "lg": { "value": "1024px" },
+    "xl": { "value": "1280px" },
+    "2xl": { "value": "1536px" }
+  }
+}
