@@ -8,16 +8,21 @@ import {
   Image,
   HelpCircle,
   MessageSquare,
+  Video,
   Menu,
   X,
   ExternalLink,
+  Home,
+  Settings,
 } from "lucide-react";
 
 const adminNav = [
   { label: "대시보드", href: "/admin", icon: LayoutDashboard },
   { label: "포트폴리오", href: "/admin/portfolio", icon: Image },
+  { label: "시공 영상", href: "/admin/videos", icon: Video },
   { label: "FAQ", href: "/admin/faq", icon: HelpCircle },
   { label: "고객 후기", href: "/admin/reviews", icon: MessageSquare },
+  { label: "사이트 설정", href: "/admin/settings", icon: Settings },
 ] as const;
 
 export function AdminSidebar() {
@@ -55,7 +60,13 @@ export function AdminSidebar() {
         <span className="flex-1 text-center font-semibold text-sm text-foreground truncate px-2">
           카리페인트 관리자
         </span>
-        <div className="w-10" />
+        <Link
+          href="/"
+          className="flex items-center justify-center h-10 w-10 -mr-1 rounded-lg text-muted-foreground hover:bg-accent hover:text-accent-foreground active:scale-95 transition-all"
+          aria-label="사이트로 이동"
+        >
+          <Home className="h-5 w-5" />
+        </Link>
       </header>
 
       {/* 모바일: 슬라이드 오버레이 메뉴 */}

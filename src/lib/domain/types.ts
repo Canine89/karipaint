@@ -76,3 +76,35 @@ export interface UpdateReviewInput {
   spaceType?: string;
   order?: number;
 }
+
+export interface Video {
+  id: string;
+  title: string;
+  youtubeUrl: string;
+  description: string;
+  order: number;
+  createdAt: string;
+}
+
+export interface CreateVideoInput {
+  title: string;
+  youtubeUrl: string;
+  description: string;
+  order: number;
+}
+
+export interface UpdateVideoInput {
+  title?: string;
+  youtubeUrl?: string;
+  description?: string;
+  order?: number;
+}
+
+export interface SiteSettings {
+  heroImageUrl: string;
+  updatedAt: string;
+}
+
+export interface UpdateSiteSettingsInput {
+  heroImageUrl?: string;
+}

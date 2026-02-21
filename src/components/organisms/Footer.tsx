@@ -40,6 +40,14 @@ export function Footer() {
             이메일: {company.email}
           </a>
         </div>
+        <div className="mt-4 text-center">
+          <Link
+            href="/admin/login"
+            className="text-[#444] text-[11px] hover:text-[#666] transition-colors"
+          >
+            관리자
+          </Link>
+        </div>
       </div>
     </footer>
   );

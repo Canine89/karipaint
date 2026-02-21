@@ -1,12 +1,12 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { portfolioRepository } from "@/lib/repositories";
-import { faqRepository } from "@/lib/repositories";
-import { reviewRepository } from "@/lib/repositories";
+import { portfolioRepository, faqRepository, reviewRepository, videoRepository, siteSettingsRepository } from "@/lib/repositories";
 import type { CreatePortfolioInput, UpdatePortfolioInput } from "@/lib/domain/types";
 import type { CreateFaqInput, UpdateFaqInput } from "@/lib/domain/types";
 import type { CreateReviewInput, UpdateReviewInput } from "@/lib/domain/types";
+import type { CreateVideoInput, UpdateVideoInput } from "@/lib/domain/types";
+import type { UpdateSiteSettingsInput } from "@/lib/domain/types";
 
 export async function createPortfolio(data: CreatePortfolioInput) {
   await portfolioRepository.create(data);
@@ -71,6 +71,38 @@ export async function updateReview(id: string, data: UpdateReviewInput) {
 export async function deleteReview(id: string) {
   await reviewRepository.delete(id);
   revalidatePath("/admin/reviews");
+  revalidatePath("/admin");
+  revalidatePath("/");
+}
+
+export async function createVideo(data: CreateVideoInput) {
+  await videoRepository.create(data);
+  revalidatePath("/admin/videos");
+  revalidatePath("/admin");
+  revalidatePath("/");
+  revalidatePath("/videos");
+}
+
+export async function updateVideo(id: string, data: UpdateVideoInput) {
+  await videoRepository.update(id, data);
+  revalidatePath("/admin/videos");
+  revalidatePath(`/admin/videos/${id}`);
+  revalidatePath("/admin");
+  revalidatePath("/");
+  revalidatePath("/videos");
+}
+
+export async function deleteVideo(id: string) {
+  await videoRepository.delete(id);
+  revalidatePath("/admin/videos");
+  revalidatePath("/admin");
+  revalidatePath("/");
+  revalidatePath("/videos");
+}
+
+export async function updateSiteSettings(data: UpdateSiteSettingsInput) {
+  await siteSettingsRepository.update(data);
+  revalidatePath("/admin/settings");
   revalidatePath("/admin");
   revalidatePath("/");
 }

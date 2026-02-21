@@ -1,20 +1,19 @@
 import Link from "next/link";
-import { portfolioRepository } from "@/lib/repositories";
-import { faqRepository } from "@/lib/repositories";
-import { reviewRepository } from "@/lib/repositories";
+import { portfolioRepository, faqRepository, reviewRepository, videoRepository } from "@/lib/repositories";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Image, HelpCircle, MessageSquare } from "lucide-react";
+import { Image, HelpCircle, MessageSquare, Video } from "lucide-react";
 
 export default async function AdminDashboardPage() {
-  const [portfolios, faqs, reviews] = await Promise.all([
+  const [portfolios, faqs, reviews, videos] = await Promise.all([
     portfolioRepository.getAll(),
     faqRepository.getAll(),
     reviewRepository.getAll(),
+    videoRepository.getAll(),
   ]);
 
   const stats = [
     { label: "포트폴리오", count: portfolios.length, href: "/admin/portfolio", icon: Image },
+    { label: "시공 영상", count: videos.length, href: "/admin/videos", icon: Video },
     { label: "FAQ", count: faqs.length, href: "/admin/faq", icon: HelpCircle },
     { label: "고객 후기", count: reviews.length, href: "/admin/reviews", icon: MessageSquare },
   ];

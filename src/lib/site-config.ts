@@ -23,10 +23,13 @@ export const siteConfig = {
     instagram:
       process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://www.instagram.com/kari_paint_official/",
     youtube: "https://www.youtube.com/@karipaint",
+    naverBlog: "https://blog.naver.com/karipaint",
+    naverTalk: "https://talk.naver.com/ct/w5zle6?frm=pblog#nafullscreen",
   },
   nav: [
     { label: "홈", href: "/" },
-    { label: "견적 문의", href: "/inquiry" },
+    { label: "시공 영상", href: "/videos" },
     { label: "작업 결과물", href: "/portfolio" },
+    { label: "견적 문의", href: "/inquiry" },
   ],
 } as const;

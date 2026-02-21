@@ -2,10 +2,14 @@ import type {
   PortfolioRepository,
   FaqRepository,
   ReviewRepository,
+  VideoRepository,
+  SiteSettingsRepository,
 } from "@/lib/domain/repositories";
 import { MockPortfolioRepository } from "@/lib/data/mock/mock-portfolio.repository";
 import { MockFaqRepository } from "@/lib/data/mock/mock-faq.repository";
 import { MockReviewRepository } from "@/lib/data/mock/mock-review.repository";
+import { MockVideoRepository } from "@/lib/data/mock/mock-video.repository";
+import { MockSiteSettingsRepository } from "@/lib/data/mock/mock-site-settings.repository";
 
 /** Vercel 배포(production/preview) 환경인지 */
 const IS_DEPLOYED =
@@ -30,6 +34,8 @@ function assertFirebaseForDeploy(): void {
 let _portfolioRepo: PortfolioRepository;
 let _faqRepo: FaqRepository;
 let _reviewRepo: ReviewRepository;
+let _videoRepo: VideoRepository;
+let _siteSettingsRepo: SiteSettingsRepository;
 
 async function getPortfolioRepository(): Promise<PortfolioRepository> {
   if (_portfolioRepo) return _portfolioRepo;
@@ -95,4 +101,45 @@ export const reviewRepository: ReviewRepository = {
   create: (data) => getReviewRepository().then((r) => r.create(data)),
   update: (id, data) => getReviewRepository().then((r) => r.update(id, data)),
   delete: (id) => getReviewRepository().then((r) => r.delete(id)),
+};
+
+async function getVideoRepository(): Promise<VideoRepository> {
+  if (_videoRepo) return _videoRepo;
+  if (USE_FIREBASE) {
+    const { FirestoreVideoRepository } = await import(
+      "@/lib/data/firestore/firestore-video.repository"
+    );
+    _videoRepo = new FirestoreVideoRepository();
+  } else {
+    assertFirebaseForDeploy();
+    _videoRepo = new MockVideoRepository();
+  }
+  return _videoRepo;
+}
+
+export const videoRepository: VideoRepository = {
+  getAll: () => getVideoRepository().then((r) => r.getAll()),
+  getById: (id) => getVideoRepository().then((r) => r.getById(id)),
+  create: (data) => getVideoRepository().then((r) => r.create(data)),
+  update: (id, data) => getVideoRepository().then((r) => r.update(id, data)),
+  delete: (id) => getVideoRepository().then((r) => r.delete(id)),
+};
+
+async function getSiteSettingsRepository(): Promise<SiteSettingsRepository> {
+  if (_siteSettingsRepo) return _siteSettingsRepo;
+  if (USE_FIREBASE) {
+    const { FirestoreSiteSettingsRepository } = await import(
+      "@/lib/data/firestore/firestore-site-settings.repository"
+    );
+    _siteSettingsRepo = new FirestoreSiteSettingsRepository();
+  } else {
+    assertFirebaseForDeploy();
+    _siteSettingsRepo = new MockSiteSettingsRepository();
+  }
+  return _siteSettingsRepo;
+}
+
+export const siteSettingsRepository: SiteSettingsRepository = {
+  get: () => getSiteSettingsRepository().then((r) => r.get()),
+  update: (data) => getSiteSettingsRepository().then((r) => r.update(data)),
 };

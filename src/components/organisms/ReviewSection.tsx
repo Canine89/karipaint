@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import type { Review } from "@/lib/domain/types";
 
@@ -19,10 +19,12 @@ interface ReviewSectionProps {
 }
 
 export function ReviewSection({ items, limit = 6 }: ReviewSectionProps) {
-  const displayItems = useMemo(
-    () => shuffle(items).slice(0, limit),
-    [items, limit]
-  );
+  const initial = items.slice(0, limit);
+  const [displayItems, setDisplayItems] = useState(initial);
+
+  useEffect(() => {
+    setDisplayItems(shuffle(items).slice(0, limit));
+  }, [items, limit]);
 
   if (displayItems.length === 0) {
     return (

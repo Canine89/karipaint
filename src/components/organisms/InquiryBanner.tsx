@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Instagram, Youtube } from "lucide-react";
+import { MessageCircle, Instagram, Youtube, MessagesSquare } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
 interface InquiryBannerProps {
@@ -76,6 +76,40 @@ export function InquiryBanner({ compact = false }: InquiryBannerProps) {
                 >
                   <Youtube className="mr-2 h-4 w-4" />
                   유튜브
+                </Link>
+              </Button>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+              <Button
+                asChild
+                size={compact ? "default" : "lg"}
+                className="h-12 w-[180px] rounded-lg bg-[#03C75A] text-white hover:bg-[#03C75A]/90 border-0"
+              >
+                <Link
+                  href={siteConfig.links.naverTalk}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessagesSquare className="mr-2 h-4 w-4" />
+                  네이버 톡톡
+                </Link>
+              </Button>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+              <Button
+                asChild
+                size={compact ? "default" : "lg"}
+                className="h-12 w-[180px] rounded-lg bg-[#03C75A] text-white hover:bg-[#03C75A]/90 border-0"
+              >
+                <Link
+                  href={siteConfig.links.naverBlog}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845Z" />
+                  </svg>
+                  네이버 블로그
                 </Link>
               </Button>
             </motion.div>

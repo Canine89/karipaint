@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
 
-const HERO_IMAGE =
+const DEFAULT_HERO_IMAGE =
   "https://images.unsplash.com/photo-1674500197236-a9baa14a697e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NDk0NjB8&ixlib=rb-4.1.0&q=80&w=1080";
 
 interface HeroProps {
@@ -14,6 +14,7 @@ interface HeroProps {
   title?: string;
   subtitle?: string;
   showCta?: boolean;
+  heroImageUrl?: string;
 }
 
 export function Hero({
@@ -21,7 +22,9 @@ export function Hero({
   title = "공간의 가치를 높이는, 내 손으로 완성하는",
   subtitle = "2대째 이어진 도장 시공",
   showCta = true,
+  heroImageUrl,
 }: HeroProps) {
+  const imageUrl = heroImageUrl || DEFAULT_HERO_IMAGE;
   const isCompact = variant === "compact";
 
   return (
@@ -85,7 +88,7 @@ export function Hero({
           >
             <div className="relative aspect-[4/3] md:aspect-[280/200] rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src={HERO_IMAGE}
+                src={imageUrl}
                 alt="도장 시공 완료 공간"
                 fill
                 className="object-cover"

@@ -32,20 +32,15 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+              className={`text-sm font-medium transition-colors ${
+                item.href === "/inquiry"
+                  ? "text-[#722F37] hover:text-[#722F37]/80 font-semibold"
+                  : "text-foreground/80 hover:text-foreground"
+              }`}
             >
               {item.label}
             </Link>
           ))}
-          <Button
-            asChild
-            size="sm"
-            className="h-10 w-[120px] rounded-lg bg-[#722F37] hover:bg-[#722F37]/90"
-          >
-            <Link href={siteConfig.links.kakao} target="_blank" rel="noopener noreferrer">
-              견적 문의
-            </Link>
-          </Button>
         </nav>
 
         {/* Mobile nav */}
@@ -66,21 +61,15 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                  className={`text-lg font-medium transition-colors ${
+                    item.href === "/inquiry"
+                      ? "text-[#722F37] hover:text-[#722F37]/80 font-semibold"
+                      : "text-foreground hover:text-primary"
+                  }`}
                 >
                   {item.label}
                 </Link>
               ))}
-              <Button asChild size="lg" className="h-10 rounded-lg bg-[#722F37] hover:bg-[#722F37]/90 mt-4">
-                <Link
-                  href={siteConfig.links.kakao}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setOpen(false)}
-                >
-                  견적 문의
-                </Link>
-              </Button>
             </nav>
           </SheetContent>
         </Sheet>
