@@ -29,9 +29,9 @@ export default async function AdminReviewsPage() {
       </div>
 
       {/* 모바일: 카드 뷰 */}
-      <div className="md:hidden space-y-3">
+      <div className="md:hidden space-y-3.5">
         {reviews.length === 0 ? (
-          <div className="rounded-xl border-2 border-dashed border-muted-foreground/20 p-8 md:p-10 text-center">
+          <div className="rounded-xl border-2 border-dashed border-muted-foreground/20 p-8 text-center">
             <p className="text-muted-foreground mb-4">등록된 후기가 없습니다.</p>
             <Button asChild>
               <Link href="/admin/reviews/new">
@@ -45,14 +45,14 @@ export default async function AdminReviewsPage() {
             <Card key={item.id}>
               <CardContent className="p-4">
                 <p className="text-foreground line-clamp-2">&ldquo;{item.quote}&rdquo;</p>
-                <p className="text-sm text-muted-foreground mt-1">
+                <p className="text-sm text-muted-foreground mt-1.5">
                   — {item.author}
                   {item.spaceType && ` · ${item.spaceType}`}
                 </p>
-                <div className="flex items-center justify-between gap-2 mt-3">
+                <div className="flex items-center justify-between gap-2 mt-4">
                   <span className="text-xs text-muted-foreground">순서: {item.order}</span>
                   <div className="flex gap-2">
-                    <Button asChild variant="outline" size="sm">
+                    <Button asChild variant="outline" size="sm" className="h-10">
                       <Link href={`/admin/reviews/${item.id}`}>
                         <Pencil className="mr-1.5 h-3.5 w-3.5" />
                         수정

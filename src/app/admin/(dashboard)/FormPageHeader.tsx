@@ -14,7 +14,7 @@ export function FormPageHeader({
   backLabel = "목록",
 }: FormPageHeaderProps) {
   return (
-    <div className="flex items-center gap-2 md:gap-4 mb-6 md:mb-8">
+    <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
       <Button
         asChild
         variant="ghost"

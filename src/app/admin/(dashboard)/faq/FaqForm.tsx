@@ -38,7 +38,9 @@ export function FaqForm({ faq }: FaqFormProps) {
       className="space-y-8 max-w-2xl"
     >
       <section className="space-y-5">
-        <h2 className="text-sm font-semibold text-muted-foreground">FAQ 내용</h2>
+        <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+          FAQ 내용
+        </h2>
         <div>
           <Label htmlFor="question">질문</Label>
           <Input
@@ -47,11 +49,11 @@ export function FaqForm({ faq }: FaqFormProps) {
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
             required
-            className="mt-2 h-10"
+            className="mt-2 h-11"
           />
         </div>
         <div>
-          <Label>답변</Label>
+          <Label className="mb-2 block">답변</Label>
           <AiDraftSection
             type="faq_answer"
             context={{ question }}
@@ -70,13 +72,20 @@ export function FaqForm({ faq }: FaqFormProps) {
             name="order"
             type="number"
             defaultValue={faq?.order ?? 0}
-            className="mt-2 h-10 max-w-24"
+            className="mt-2 h-11 max-w-28"
           />
         </div>
       </section>
-      <div className="flex flex-col-reverse sm:flex-row gap-3 pt-4 border-t">
-        <Button type="submit" className="min-h-11">{isEdit ? "수정" : "등록"}</Button>
-        <Button type="button" variant="outline" onClick={() => router.back()} className="min-h-11">
+      <div className="flex flex-col-reverse sm:flex-row gap-3 pt-6 border-t">
+        <Button type="submit" className="h-11">
+          {isEdit ? "수정" : "등록"}
+        </Button>
+        <Button
+          type="button"
+          variant="outline"
+          onClick={() => router.back()}
+          className="h-11"
+        >
           취소
         </Button>
       </div>

@@ -40,9 +40,9 @@ export default async function AdminDashboardPage() {
                 </span>
                 <Icon className="h-5 w-5 text-muted-foreground" />
               </CardHeader>
-              <CardContent className="pt-0">
+              <CardContent className="pt-1">
                 <p className="text-3xl font-bold tabular-nums">{count}</p>
-                <span className="inline-block mt-3 text-sm font-medium text-primary hover:underline">
+                <span className="inline-block mt-4 text-sm font-medium text-primary hover:underline">
                   관리하기 →
                 </span>
               </CardContent>

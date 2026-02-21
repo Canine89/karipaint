@@ -34,7 +34,7 @@ export function AdminSidebar() {
           카리페인트 관리자
         </Link>
       </div>
-      <nav className="flex-1 p-3 md:p-4 space-y-0.5">
+      <nav className="flex-1 p-3 md:p-4 space-y-1">
         {adminNav.map(({ label, href, icon: Icon }) => (
           <Link
             key={href}
@@ -51,10 +51,10 @@ export function AdminSidebar() {
           </Link>
         ))}
       </nav>
-      <div className="p-3 md:p-4 border-t border-border">
+      <div className="p-4 border-t border-border">
         <Link
           href="/"
-          className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm text-muted-foreground hover:bg-accent hover:text-foreground transition-colors"
+          className="flex items-center gap-2 rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-accent hover:text-foreground transition-colors"
           onClick={() => setOpen(false)}
         >
           <span>←</span>

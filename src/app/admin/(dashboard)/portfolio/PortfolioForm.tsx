@@ -76,8 +76,10 @@ export function PortfolioForm({ portfolio }: PortfolioFormProps) {
       className="space-y-8 max-w-2xl"
     >
       <section className="space-y-5">
-        <h2 className="text-sm font-semibold text-muted-foreground">기본 정보</h2>
-        <div className="space-y-4">
+        <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+          기본 정보
+        </h2>
+        <div className="space-y-5">
           <div>
             <Label htmlFor="title">제목</Label>
             <Input
@@ -86,7 +88,7 @@ export function PortfolioForm({ portfolio }: PortfolioFormProps) {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               required
-              className="mt-2 h-10"
+              className="mt-2 h-11"
             />
           </div>
           <div>
@@ -97,7 +99,7 @@ export function PortfolioForm({ portfolio }: PortfolioFormProps) {
               value={category}
               onChange={(e) => setCategory(e.target.value)}
               required
-              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 mt-2"
+              className="flex h-11 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 mt-2"
             >
               <option value="">선택</option>
               {CATEGORIES.map((c) => (
@@ -107,127 +109,137 @@ export function PortfolioForm({ portfolio }: PortfolioFormProps) {
               ))}
             </select>
           </div>
-          <div>
-            <Label htmlFor="region">지역</Label>
-            <Input
-              id="region"
-              name="region"
-              value={region}
-              onChange={(e) => setRegion(e.target.value)}
-              required
-              className="mt-2 h-10"
-              placeholder="예: 서울 강남구"
-            />
-          </div>
-          <div>
-            <Label htmlFor="duration">소요일</Label>
-            <Input
-              id="duration"
-              name="duration"
-              value={duration}
-              onChange={(e) => setDuration(e.target.value)}
-              required
-              className="mt-2 h-10"
-              placeholder="예: 3일"
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <Label htmlFor="region">지역</Label>
+              <Input
+                id="region"
+                name="region"
+                value={region}
+                onChange={(e) => setRegion(e.target.value)}
+                required
+                className="mt-2 h-11"
+                placeholder="예: 서울 강남구"
+              />
+            </div>
+            <div>
+              <Label htmlFor="duration">소요일</Label>
+              <Input
+                id="duration"
+                name="duration"
+                value={duration}
+                onChange={(e) => setDuration(e.target.value)}
+                required
+                className="mt-2 h-11"
+                placeholder="예: 3일"
+              />
+            </div>
           </div>
         </div>
       </section>
+
       <section className="space-y-5">
-        <h2 className="text-sm font-semibold text-muted-foreground">상세 내용</h2>
+        <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+          상세 내용
+        </h2>
         <div>
-          <Label>설명</Label>
-        <AiDraftSection
-          type="portfolio_desc"
-          context={{
-            region,
-            category,
-            duration,
-            space: title || category,
-          }}
-          value={description}
-          onChange={setDescription}
-          name="description"
-          label="설명"
-          required
-          rows={4}
-        />
+          <Label className="mb-2 block">설명</Label>
+          <AiDraftSection
+            type="portfolio_desc"
+            context={{
+              region,
+              category,
+              duration,
+              space: title || category,
+            }}
+            value={description}
+            onChange={setDescription}
+            name="description"
+            label="설명"
+            required
+            rows={4}
+          />
         </div>
         <div>
-          <Label>현장 사진</Label>
-        <p className="text-sm text-muted-foreground mt-1 mb-2">
-          모바일에서는 카메라로 바로 촬영, PC에서는 파일 선택 가능
-        </p>
-        <div className="space-y-3">
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept="image/*"
-            capture="environment"
-            className="hidden"
-            onChange={handleImageSelect}
-          />
-          <div className="flex gap-2 flex-wrap">
-            <Button
-              type="button"
-              variant="outline"
-              onClick={() => fileInputRef.current?.click()}
-              disabled={uploading}
-            >
-              {uploading ? "업로드 중..." : "📷 사진 촬영 / 선택"}
-            </Button>
-            {imageUrl && (
+          <Label className="mb-2 block">현장 사진</Label>
+          <p className="text-sm text-muted-foreground mb-3">
+            모바일에서는 카메라로 바로 촬영, PC에서는 파일 선택 가능
+          </p>
+          <div className="space-y-3">
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/*"
+              capture="environment"
+              className="hidden"
+              onChange={handleImageSelect}
+            />
+            <div className="flex gap-2 flex-wrap">
               <Button
                 type="button"
-                variant="ghost"
-                size="sm"
-                onClick={() => setImageUrl("")}
+                variant="outline"
+                className="h-11"
+                onClick={() => fileInputRef.current?.click()}
+                disabled={uploading}
               >
-                제거
+                {uploading ? "업로드 중..." : "📷 사진 촬영 / 선택"}
               </Button>
-            )}
-          </div>
-          {imageUrl ? (
-            <div className="relative w-full max-w-xs aspect-video rounded-lg overflow-hidden border border-input bg-muted">
-              <Image
-                src={imageUrl}
-                alt="미리보기"
-                fill
-                className="object-cover"
-                unoptimized
-              />
+              {imageUrl && (
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  className="h-11"
+                  onClick={() => setImageUrl("")}
+                >
+                  제거
+                </Button>
+              )}
             </div>
-          ) : null}
-          <Input
-            id="imageUrl"
-            name="imageUrl"
-            type="url"
-            value={imageUrl}
-            onChange={(e) => setImageUrl(e.target.value)}
-            required
-            className="mt-2 h-10"
-            placeholder="위에서 촬영/선택하거나 URL 직접 입력"
-          />
+            {imageUrl && (
+              <div className="relative w-full max-w-xs aspect-video rounded-lg overflow-hidden border border-input bg-muted">
+                <Image
+                  src={imageUrl}
+                  alt="미리보기"
+                  fill
+                  className="object-cover"
+                  unoptimized
+                />
+              </div>
+            )}
+            <Input
+              id="imageUrl"
+              name="imageUrl"
+              type="url"
+              value={imageUrl}
+              onChange={(e) => setImageUrl(e.target.value)}
+              required
+              className="h-11"
+              placeholder="위에서 촬영/선택하거나 URL 직접 입력"
+            />
+          </div>
         </div>
-      </div>
-      <div>
-        <Label htmlFor="order">정렬 순서</Label>
-        <Input
+        <div>
+          <Label htmlFor="order">정렬 순서</Label>
+          <Input
             id="order"
             name="order"
             type="number"
             defaultValue={portfolio?.order ?? 0}
-          className="mt-2 h-10 max-w-24"
-        />
-      </div>
+            className="mt-2 h-11 max-w-28"
+          />
+        </div>
       </section>
-      <div className="flex flex-col-reverse sm:flex-row gap-3 pt-4 border-t">
-        <Button type="submit" className="min-h-11">{isEdit ? "수정" : "등록"}</Button>
+
+      <div className="flex flex-col-reverse sm:flex-row gap-3 pt-6 border-t">
+        <Button type="submit" className="h-11">
+          {isEdit ? "수정" : "등록"}
+        </Button>
         <Button
           type="button"
           variant="outline"
           onClick={() => router.back()}
-          className="min-h-11"
+          className="h-11"
         >
           취소
         </Button>

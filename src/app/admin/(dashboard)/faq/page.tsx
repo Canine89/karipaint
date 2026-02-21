@@ -29,9 +29,9 @@ export default async function AdminFaqPage() {
       </div>
 
       {/* 모바일: 카드 뷰 */}
-      <div className="md:hidden space-y-3">
+      <div className="md:hidden space-y-3.5">
         {faqs.length === 0 ? (
-          <div className="rounded-xl border-2 border-dashed border-muted-foreground/20 p-8 md:p-10 text-center">
+          <div className="rounded-xl border-2 border-dashed border-muted-foreground/20 p-8 text-center">
             <p className="text-muted-foreground mb-4">등록된 FAQ가 없습니다.</p>
             <Button asChild>
               <Link href="/admin/faq/new">
@@ -45,11 +45,11 @@ export default async function AdminFaqPage() {
             <Card key={item.id}>
               <CardContent className="p-4">
                 <p className="font-medium text-foreground line-clamp-2">{item.question}</p>
-                <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{item.answer}</p>
-                <div className="flex items-center justify-between gap-2 mt-3">
+                <p className="text-sm text-muted-foreground mt-1.5 line-clamp-2">{item.answer}</p>
+                <div className="flex items-center justify-between gap-2 mt-4">
                   <span className="text-xs text-muted-foreground">순서: {item.order}</span>
                   <div className="flex gap-2">
-                    <Button asChild variant="outline" size="sm">
+                    <Button asChild variant="outline" size="sm" className="h-10">
                       <Link href={`/admin/faq/${item.id}`}>
                         <Pencil className="mr-1.5 h-3.5 w-3.5" />
                         수정

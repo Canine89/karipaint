@@ -38,41 +38,45 @@ export function ReviewForm({ review }: ReviewFormProps) {
       className="space-y-8 max-w-2xl"
     >
       <section className="space-y-5">
-        <h2 className="text-sm font-semibold text-muted-foreground">후기 정보</h2>
+        <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+          후기 정보
+        </h2>
         <div>
-          <Label>후기 내용</Label>
+          <Label className="mb-2 block">후기 내용</Label>
           <AiDraftSection
-          type="review_polish"
-          value={quote}
-          onChange={setQuote}
-          name="quote"
-          label="후기 내용"
-          placeholder="후기 원문 또는 메모를 입력한 후 ✨ 버튼으로 문장 다듬기"
-          required
-          rows={4}
-        />
-        </div>
-        <div>
-          <Label htmlFor="author">작성자</Label>
-          <Input
-            id="author"
-            name="author"
-            defaultValue={review?.author}
+            type="review_polish"
+            value={quote}
+            onChange={setQuote}
+            name="quote"
+            label="후기 내용"
+            placeholder="후기 원문 또는 메모를 입력한 후 ✨ 버튼으로 문장 다듬기"
             required
-            className="mt-2 h-10"
-            placeholder="예: 강남구 이○○ 고객님"
+            rows={4}
           />
         </div>
-        <div>
-          <Label htmlFor="spaceType">공간 유형</Label>
-          <Input
-            id="spaceType"
-            name="spaceType"
-            defaultValue={review?.spaceType}
-            required
-            className="mt-2 h-10"
-            placeholder="예: 거실, 방·거실"
-          />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <Label htmlFor="author">작성자</Label>
+            <Input
+              id="author"
+              name="author"
+              defaultValue={review?.author}
+              required
+              className="mt-2 h-11"
+              placeholder="예: 강남구 이○○ 고객님"
+            />
+          </div>
+          <div>
+            <Label htmlFor="spaceType">공간 유형</Label>
+            <Input
+              id="spaceType"
+              name="spaceType"
+              defaultValue={review?.spaceType}
+              required
+              className="mt-2 h-11"
+              placeholder="예: 거실, 방·거실"
+            />
+          </div>
         </div>
         <div>
           <Label htmlFor="order">정렬 순서</Label>
@@ -81,13 +85,20 @@ export function ReviewForm({ review }: ReviewFormProps) {
             name="order"
             type="number"
             defaultValue={review?.order ?? 0}
-            className="mt-2 h-10 max-w-24"
+            className="mt-2 h-11 max-w-28"
           />
         </div>
       </section>
-      <div className="flex flex-col-reverse sm:flex-row gap-3 pt-4 border-t">
-        <Button type="submit" className="min-h-11">{isEdit ? "수정" : "등록"}</Button>
-        <Button type="button" variant="outline" onClick={() => router.back()} className="min-h-11">
+      <div className="flex flex-col-reverse sm:flex-row gap-3 pt-6 border-t">
+        <Button type="submit" className="h-11">
+          {isEdit ? "수정" : "등록"}
+        </Button>
+        <Button
+          type="button"
+          variant="outline"
+          onClick={() => router.back()}
+          className="h-11"
+        >
           취소
         </Button>
       </div>

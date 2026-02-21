@@ -88,10 +88,10 @@ export function AiDraftSection({
   };
 
   return (
-    <div className="space-y-4 rounded-lg border border-input bg-muted/20 p-4 md:p-5">
+    <div className="space-y-5 rounded-lg border border-input bg-muted/20 p-4 md:p-5">
       {/* AI 초안 작성 영역 */}
       <div>
-        <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between mb-2">
+        <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between mb-3">
           <span className="text-sm font-medium text-muted-foreground">
             AI로 초안 작성
           </span>

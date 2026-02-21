@@ -29,9 +29,9 @@ export default async function AdminPortfolioPage() {
       </div>
 
       {/* 모바일: 카드 뷰 */}
-      <div className="md:hidden space-y-3">
+      <div className="md:hidden space-y-3.5">
         {portfolios.length === 0 ? (
-          <div className="rounded-xl border-2 border-dashed border-muted-foreground/20 p-8 md:p-10 text-center">
+          <div className="rounded-xl border-2 border-dashed border-muted-foreground/20 p-8 text-center">
             <p className="text-muted-foreground mb-4">등록된 시공 사례가 없습니다.</p>
             <Button asChild>
               <Link href="/admin/portfolio/new">
@@ -45,11 +45,11 @@ export default async function AdminPortfolioPage() {
             <Card key={item.id}>
               <CardContent className="p-4">
                 <p className="font-medium text-foreground">{item.title}</p>
-                <p className="text-sm text-muted-foreground mt-1">
+                <p className="text-sm text-muted-foreground mt-1.5">
                   {item.category} · {item.region} · {item.duration}
                 </p>
-                <div className="flex gap-2 mt-3">
-                  <Button asChild variant="outline" size="sm" className="flex-1">
+                <div className="flex gap-2 mt-4">
+                  <Button asChild variant="outline" size="sm" className="flex-1 h-10">
                     <Link href={`/admin/portfolio/${item.id}`}>
                       <Pencil className="mr-1.5 h-3.5 w-3.5" />
                       수정
