@@ -11,7 +11,7 @@ import { InquiryBanner } from "@/components/organisms/InquiryBanner";
 
 export const metadata = {
   title: "견적 문의 | 카리페인트",
-  description: "편한 방법으로 언제든 문의하세요. 카카오톡, 인스타 DM으로 빠르게 상담해 드립니다.",
+  description: "편한 방법으로 언제든 문의하세요. 카카오톡, 인스타 DM으로 빠르게 상담 가능합니다.",
 };
 
 const INQUIRY_ITEMS = [

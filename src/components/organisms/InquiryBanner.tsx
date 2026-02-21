@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Instagram } from "lucide-react";
+import { MessageCircle, Instagram, Youtube } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
 interface InquiryBannerProps {
@@ -67,14 +67,15 @@ export function InquiryBanner({ compact = false }: InquiryBannerProps) {
               <Button
                 asChild
                 size={compact ? "default" : "lg"}
-                className="h-12 w-[180px] rounded-lg bg-[#03C75A] text-white hover:bg-[#03C75A]/90 border-0"
+                className="h-12 w-[180px] rounded-lg bg-[#FF0000] text-white hover:bg-[#FF0000]/90 border-0"
               >
                 <Link
-                  href={siteConfig.links.naverTalk}
+                  href={siteConfig.links.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  네이버 톡톡
+                  <Youtube className="mr-2 h-4 w-4" />
+                  유튜브
                 </Link>
               </Button>
             </motion.div>

@@ -19,10 +19,10 @@ export const siteConfig = {
     email: "karipaint@naver.com",
   },
   links: {
-    kakao: process.env.NEXT_PUBLIC_KAKAO_URL || "https://open.kakao.com/o/여기에링크입력",
+    kakao: process.env.NEXT_PUBLIC_KAKAO_URL || "https://open.kakao.com/o/s29gWu7f",
     instagram:
-      process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://instagram.com/계정아이디",
-    naverTalk: "#",
+      process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://www.instagram.com/kari_paint_official/",
+    youtube: "https://www.youtube.com/@karipaint",
   },
   nav: [
     { label: "홈", href: "/" },
